@@ -12,9 +12,13 @@ const Landing = () => {
       <div className="container page">
         <div className="info">
           <h1>
-            job <span>tracking</span>
+            job <span>tracker</span>
           </h1>
-          <p>lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p>
+            Shukatsu pronounced "shoe cat su " is the Japanese word for job
+            hunting. Let's use this app keep track of your interviews and get
+            that dream job.
+          </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
           </Link>
