@@ -5,7 +5,6 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
         {/* some instancs where the labelText does not match the name */}
         {labelText || name}
       </label>
-
       <input
         type={type}
         value={value}
