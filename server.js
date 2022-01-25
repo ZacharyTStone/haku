@@ -6,6 +6,9 @@ const app = express();
 import dotenv from "dotenv";
 dotenv.config();
 
+// db
+import connectDB from "./db/connect.js";
+
 //middleware for if the route is not found
 notFoundMiddleware;
 import notFoundMiddleware from "./middleware/not-found.js";
@@ -22,6 +25,16 @@ app.use(errorHandlerMiddleware);
 
 const port = process.env.PORT || 5000;
 
-app.listen(port, () => {
-  console.log("Server is running on port: " + port);
-});
+const start = async () => {
+  try {
+    await connectDB(process.env.MONGO_URL);
+    app.listen(port, () => {
+      console.log(`Server is running on port ${port}`);
+    });
+  } catch (error) {
+    console.error(error);
+    process.exit(1);
+  }
+};
+
+start();
