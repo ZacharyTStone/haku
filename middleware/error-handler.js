@@ -5,8 +5,8 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 
   //get the error code
   const defaultError = {
-    statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
-    message: "Internal Server Error",
+    statusCode: err.statusCode || StatusCodes.INTERNAL_SERVER_ERROR,
+    message: err.message || "Internal Server Error",
   };
   // bad request
   if (err.name === "ValidationError") {
