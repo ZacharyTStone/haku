@@ -24,6 +24,7 @@ const userSchema = new Mongoose.Schema({
     type: String,
     required: [true, "Please provide password."],
     minlength: [6, "Password must be at least 6 characters."],
+    select: false,
   },
   lastName: {
     type: String,
@@ -46,7 +47,9 @@ userSchema.pre("save", async function () {
 });
 
 userSchema.methods.createJWT = function () {
-  return jwt.sign({ userID: this._id }, "jwtSecret", { expiresIn: "1d" });
+  return jwt.sign({ userID: this._id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_LIFETIME,
+  });
 };
 
 export default Mongoose.model("User", userSchema);

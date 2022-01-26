@@ -23,7 +23,6 @@ const errorHandlerMiddleware = (err, req, res, next) => {
 
   //send the error
 
-  // res.status(defaultError.statusCode).json({ msg: err });
   res.status(defaultError.statusCode).json({ mmessage: defaultError.message });
 };
 
