@@ -25,6 +25,37 @@ const reducer = (state, action) => {
     };
   }
 
+  if (action.type === REGISTER_USER_BEGIN) {
+    return {
+      ...state,
+      isLoading: true,
+    };
+  }
+
+  if (action.type === REGISTER_USER_SUCCESS) {
+    return {
+      ...state,
+      isLoading: false,
+      token: action.payload.token,
+      user: action.payload.user,
+      userLocation: action.payload.location,
+      jobLocation: action.payload.location,
+      showAlert: true,
+      alertType: "success",
+      alertText: "User successfully registered",
+    };
+  }
+
+  if (action.type === REGISTER_USER_ERROR) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "danger",
+      alertText: action.payload.message,
+    };
+  }
+
   throw new Error(`Unhandled action type: ${action.type}`);
 };
 
