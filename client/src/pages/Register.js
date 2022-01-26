@@ -4,6 +4,7 @@ import Wrapper from "../assets/wrappers/RegisterPage";
 import FormRow from "../Components/FormRow";
 import Alert from "../Components/Alert";
 import { useAppContext } from "../context/appContext";
+import { useNavigate } from "react-router-dom";
 
 const initialState = {
   name: "",
@@ -14,6 +15,7 @@ const initialState = {
 
 const Register = () => {
   const [values, setValues] = useState(initialState);
+  const navigate = useNavigate();
   const { user, isLoading, showAlert, displayAlert, setupUser, registerUser } =
     useAppContext();
 
@@ -39,6 +41,15 @@ const Register = () => {
       registerUser(currentUser);
     }
   };
+
+  useEffect(() => {
+    if (user) {
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    }
+  }, [user, navigate]);
+
   return (
     <Wrapper className="full-page">
       <form className="form" onSubmit={onSubmit}>
