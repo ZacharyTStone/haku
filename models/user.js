@@ -1,5 +1,6 @@
 import Mongoose from "mongoose";
 import validator from "validator";
+import bcrypt from "bcryptjs";
 
 const userSchema = new Mongoose.Schema({
   name: {
@@ -36,6 +37,11 @@ const userSchema = new Mongoose.Schema({
     maxLength: [20, "Name must be at most 20 characters."],
     default: "my location",
   },
+});
+
+userSchema.pre("save", async function () {
+  const salt = await bcrypt.genSalt(12);
+  this.password = await bcrypt.hash(this.password, salt);
 });
 
 export default Mongoose.model("User", userSchema);
