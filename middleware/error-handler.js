@@ -1,7 +1,30 @@
+import { StatusCodes } from "http-status-codes";
+
 const errorHandlerMiddleware = (err, req, res, next) => {
-  console.log(err);
-  // general server error (500)
-  res.status(500).send("Something went wrong");
+  console.log(err.message);
+
+  //get the error code
+  const defaultError = {
+    statusCode: StatusCodes.INTERNAL_SERVER_ERROR,
+    message: "Internal Server Error",
+  };
+  // bad request
+  if (err.name === "ValidationError") {
+    defaultError.statusCode = StatusCodes.BAD_REQUEST;
+    defaultError.message = Object.values(err.errors)
+      .map((item) => item.message)
+      .join(", ");
+  }
+  // not unique
+  if (err.code && err.code === 11000) {
+    defaultError.statusCode = StatusCodes.BAD_REQUEST;
+    defaultError.message = `${Object.keys(err.keyValue)} already exists`;
+  }
+
+  //send the error
+
+  // res.status(defaultError.statusCode).json({ msg: err });
+  res.status(defaultError.statusCode).json({ mmessage: defaultError.message });
 };
 
 export default errorHandlerMiddleware;

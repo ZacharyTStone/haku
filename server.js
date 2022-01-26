@@ -6,6 +6,9 @@ const app = express();
 import dotenv from "dotenv";
 dotenv.config();
 
+//express error package
+import "express-async-errors";
+
 // db and authentication
 import connectDB from "./db/connect.js";
 
