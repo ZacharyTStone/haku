@@ -9,6 +9,9 @@ dotenv.config();
 //express error package
 import "express-async-errors";
 
+//morgan (used for logging requests)
+import morgan from "morgan";
+
 // db and authentication
 import connectDB from "./db/connect.js";
 
@@ -22,6 +25,10 @@ import notFoundMiddleware from "./middleware/not-found.js";
 //middleware for if there is an error within a valid addresses
 errorHandlerMiddleware;
 import errorHandlerMiddleware from "./middleware/error-handler.js";
+
+if (process.env.NODE_ENV !== "production") {
+  app.use(morgan("dev"));
+}
 
 app.use(express.json());
 
