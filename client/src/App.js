@@ -1,5 +1,4 @@
 import Landing from "./pages/Landing";
-import Dashboard from "./pages/Dashboard";
 import Register from "./pages/Register";
 import Error from "./pages/Error";
 import {
@@ -10,16 +9,22 @@ import {
   BrowserRouter,
 } from "react-router-dom";
 
+import AddJob from "./pages/Dashboard/AddJob";
+import AllJobs from "./pages/Dashboard/AllJobs";
+import Profile from "./pages/Dashboard/Profile";
+import SharedLayout from "./pages/Dashboard/SharedLayout";
+import Stats from "./pages/Dashboard/Stats";
+
 function App() {
   return (
     <BrowserRouter>
-      <nav>
-        <Link to="/">dashboard</Link>
-        <Link to="/register">register</Link>
-        <Link to="landing">landing</Link>
-      </nav>
       <Routes>
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/" element={<SharedLayout />}>
+          <Route index element={<Stats />} />
+          <Route path="add-job" element={<AddJob />} />
+          <Route path="all-jobs" element={<AllJobs />} />
+          <Route path="profile" element={<Profile />} />
+        </Route>
         <Route path="/register" element={<Register />} />
         <Route path="/landing" element={<Landing />} />
         {/* error page */}

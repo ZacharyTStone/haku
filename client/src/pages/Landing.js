@@ -15,9 +15,8 @@ const Landing = () => {
             job <span>tracker</span>
           </h1>
           <p>
-            Shukatsu pronounced "shoe cat su " is the Japanese word for job
-            hunting. Let's use this app keep track of your interviews and get
-            that dream job.
+            Let's use this app to keep track of your interviews and get that
+            dream job!
           </p>
           <Link to="/register" className="btn btn-hero">
             Login/Register
