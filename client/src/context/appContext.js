@@ -108,7 +108,6 @@ const AppProvider = ({ children }) => {
     dispatch({ type: LOGOUT_USER });
     removeUserFromLocalStorage();
   };
-
   return (
     <AppContext.Provider
       value={{
@@ -126,9 +125,6 @@ const AppProvider = ({ children }) => {
   );
 };
 
-{
-  /* custom hook! */
-}
 const useAppContext = () => {
   return useContext(AppContext);
 };
