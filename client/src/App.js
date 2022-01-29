@@ -14,12 +14,20 @@ import AllJobs from "./pages/Dashboard/AllJobs";
 import Profile from "./pages/Dashboard/Profile";
 import SharedLayout from "./pages/Dashboard/SharedLayout";
 import Stats from "./pages/Dashboard/Stats";
+import ProtectedRoute from "./pages/ProtectedRoute";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<SharedLayout />}>
+        <Route
+          path="/"
+          element={
+            <ProtectedRoute>
+              <SharedLayout />
+            </ProtectedRoute>
+          }
+        >
           <Route index element={<Stats />} />
           <Route path="add-job" element={<AddJob />} />
           <Route path="all-jobs" element={<AllJobs />} />
