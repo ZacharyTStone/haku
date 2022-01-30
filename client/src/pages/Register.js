@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
 import Logo from "../Components/Logo";
-import Wrapper from "../assets/wrappers/RegisterPage";
 import FormRow from "../Components/FormRow";
 import Alert from "../Components/Alert";
+
+import Wrapper from "../assets/wrappers/RegisterPage";
 import { useAppContext } from "../context/appContext";
 import { useNavigate } from "react-router-dom";
-
 const initialState = {
   name: "",
   email: "",
@@ -14,17 +14,10 @@ const initialState = {
 };
 
 const Register = () => {
-  const [values, setValues] = useState(initialState);
   const navigate = useNavigate();
-  const {
-    user,
-    isLoading,
-    showAlert,
-    displayAlert,
-    setupUser,
-    registerUser,
-    loginUser,
-  } = useAppContext();
+  const [values, setValues] = useState(initialState);
+  const { user, isLoading, showAlert, displayAlert, setupUser } =
+    useAppContext();
 
   const toggleMember = () => {
     setValues({ ...values, isMember: !values.isMember });
@@ -33,7 +26,6 @@ const Register = () => {
   const handleChange = (e) => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
-
   const onSubmit = (e) => {
     e.preventDefault();
     const { name, email, password, isMember } = values;
@@ -43,9 +35,17 @@ const Register = () => {
     }
     const currentUser = { name, email, password };
     if (isMember) {
-      loginUser(currentUser);
+      setupUser({
+        currentUser,
+        endPoint: "login",
+        alertText: "Login Successful! Redirecting...",
+      });
     } else {
-      registerUser(currentUser);
+      setupUser({
+        currentUser,
+        endPoint: "register",
+        alertText: "User Created! Redirecting...",
+      });
     }
   };
 
@@ -63,8 +63,7 @@ const Register = () => {
         <Logo />
         <h3>{values.isMember ? "Login" : "Register"}</h3>
         {showAlert && <Alert />}
-
-        {/* name field */}
+        {/* name input */}
         {!values.isMember && (
           <FormRow
             type="text"
@@ -74,14 +73,14 @@ const Register = () => {
           />
         )}
 
-        {/* email field */}
+        {/* email input */}
         <FormRow
           type="email"
           name="email"
           value={values.email}
           handleChange={handleChange}
         />
-        {/* password field */}
+        {/* password input */}
         <FormRow
           type="password"
           name="password"
@@ -93,7 +92,7 @@ const Register = () => {
         </button>
         <p>
           {values.isMember ? "Not a member yet?" : "Already a member?"}
-          <button type="button" className="member-btn" onClick={toggleMember}>
+          <button type="button" onClick={toggleMember} className="member-btn">
             {values.isMember ? "Register" : "Login"}
           </button>
         </p>
@@ -101,5 +100,4 @@ const Register = () => {
     </Wrapper>
   );
 };
-
 export default Register;
