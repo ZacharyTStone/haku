@@ -2,6 +2,7 @@ import FormRow from "../../Components/FormRow";
 import Alert from "../../Components/Alert";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
 import { useAppContext } from "../../context/appContext";
+import FormRowSelect from "../../Components/FormRowSelect";
 
 const AddJob = () => {
   const {
@@ -57,6 +58,19 @@ const AddJob = () => {
             name="jobLocation"
             value={jobLocation}
             handleChange={handleJobInput}
+          />
+          <FormRowSelect
+            name="status"
+            value={status}
+            handleChange={handleJobInput}
+            list={statusOptions}
+          />
+          <FormRowSelect
+            name="jobType"
+            labelText="type"
+            value={jobType}
+            handleChange={handleJobInput}
+            list={jobTypeOptions}
           />
           <div className="btn-container">
             <button
