@@ -18,11 +18,10 @@ const Job = ({
 
   let date = moment(createdAt);
   date = date.format("MMM Do, YYYY");
-
   return (
     <Wrapper>
       <header>
-        <div className="main-icon">{company.charAt(0).toUpperCase()}</div>
+        <div className="main-icon">{company.charAt(0)}</div>
         <div className="info">
           <h5>{position}</h5>
           <p>{company}</p>
@@ -37,7 +36,11 @@ const Job = ({
         </div>
         <footer>
           <div className="actions">
-            <Link className="btn edit-btn" to={`/add-job`}>
+            <Link
+              to="/add-job"
+              className="btn edit-btn"
+              onClick={() => setEditJob(_id)}
+            >
               Edit
             </Link>
             <button
