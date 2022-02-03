@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { FormRow } from "../../components";
-import { Alert } from "../../components";
+import { FormRow } from "../../Components";
+import { Alert } from "../../Components";
 import { useAppContext } from "../../context/appContext";
 import Wrapper from "../../assets/wrappers/DashboardFormPage";
 const Profile = () => {
