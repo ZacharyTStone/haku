@@ -1,6 +1,6 @@
 import { useAppContext } from "../context/appContext";
 import NavLinks from "./NavLinks";
-import Logo from "../Components/Logo";
+import Logo from "./Logo";
 import Wrapper from "../assets/wrappers/BigSidebar";
 
 const BigSidebar = (props) => {

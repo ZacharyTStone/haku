@@ -6,6 +6,7 @@ const NavLinks = ({ toggleSidebar }) => {
     <div className="nav-links">
       {links.map((link) => {
         const { text, path, id, icon } = link;
+
         return (
           <NavLink
             to={path}

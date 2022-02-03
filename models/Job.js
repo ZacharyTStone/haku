@@ -5,7 +5,7 @@ const JobSchema = new mongoose.Schema(
     company: {
       type: String,
       required: [true, "Please provide company"],
-      maxlength: 20,
+      maxlength: 50,
     },
     position: {
       type: String,
@@ -24,7 +24,7 @@ const JobSchema = new mongoose.Schema(
     },
     jobLocation: {
       type: String,
-      default: "my location",
+      default: "my city",
       required: true,
     },
     createdBy: {
@@ -33,7 +33,7 @@ const JobSchema = new mongoose.Schema(
       required: [true, "Please provide user"],
     },
   },
-  { timestamp: true }
+  { timestamps: true }
 );
 
 export default mongoose.model("Job", JobSchema);
