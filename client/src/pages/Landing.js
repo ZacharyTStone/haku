@@ -154,7 +154,15 @@ const Landing = () => {
               <div>
                 <span>
                   <FaArrowCircleRight />
-                  <a href="https://zstone.dev" target={"_blank"}>
+                  <a
+                    href="https://zstone.dev"
+                    target={"_blank"}
+                    rel="noreferrer"
+                    style={{
+                      textDecoration: "none",
+                      color: "black",
+                    }}
+                  >
                     Click Here
                   </a>{" "}
                 </span>
