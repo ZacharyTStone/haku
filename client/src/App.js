@@ -5,6 +5,7 @@ import AllJobs from "./pages/Dashboard/AllJobs";
 import Stats from "./pages/Dashboard/Stats";
 import Profile from "./pages/Dashboard/Profile";
 import SharedLayout from "./pages/Dashboard/SharedLayout";
+import RegisterDemo from "./pages/RegisterDemo";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="profile" element={<Profile />} />
         </Route>
         <Route path="/register" element={<Register />} />
+        <Route path="/register-demo" element={<RegisterDemo />} />
         <Route path="/landing" element={<Landing />} />
         <Route path="*" element={<Error />} />
       </Routes>

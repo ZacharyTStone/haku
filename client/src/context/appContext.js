@@ -64,6 +64,7 @@ const initialState = {
   searchType: "all",
   sort: "latest",
   sortOptions: ["latest", "oldest", "a-z", "z-a"],
+  demo: false,
 };
 
 const AppContext = React.createContext();

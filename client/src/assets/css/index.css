@@ -147,6 +147,7 @@ ul {
 /* buttons */
 
 .btn {
+  margin-right: 20px;
   cursor: pointer;
   color: var(--white);
   background: var(--primary-500);
@@ -157,7 +158,8 @@ ul {
   box-shadow: var(--shadow-2);
   transition: var(--transition);
   text-transform: capitalize;
-  display: inline-block;
+  display: flex;
+  width: fit-content;
 }
 .btn:hover {
   background: var(--primary-700);

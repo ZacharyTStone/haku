@@ -14,6 +14,7 @@ import { FaSortAmountDown } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import ImageGallery from "react-image-gallery";
+
 const images = [
   {
     original: "https://media.giphy.com/media/T8pwFSeXDDPqPC6RgD/giphy.gif",
@@ -42,9 +43,14 @@ const Landing = () => {
               Hataraku <span> job tracker</span>
             </h1>
             <p>Take charge of the interview process and land that dream job!</p>
-            <Link to="/register" className="btn btn-hero">
-              Login/Register
-            </Link>
+            <div className="login-div">
+              <Link to="/register" className="btn btn-hero">
+                Login/Register
+              </Link>
+              <Link to="/register-demo" className="btn btn-hero btn-danger">
+                Demo
+              </Link>
+            </div>
           </Slide>
         </div>
         <Fade>
@@ -141,9 +147,14 @@ const Landing = () => {
                 Time to take charge of the interview process and land that dream
                 job!
               </h3>
-              <Link to="/register" className="btn btn-hero">
-                Login/Register
-              </Link>
+              <div className="login-div">
+                <Link to="/register" className="btn btn-hero">
+                  Login/Register
+                </Link>
+                <Link to="/register" className="btn btn-hero btn-danger">
+                  Demo
+                </Link>
+              </div>
               <h5
                 style={{
                   marginTop: "2rem",
@@ -187,6 +198,12 @@ const Wrapper = styled.main`
     height: var(--nav-height);
     display: flex;
     align-items: center;
+  }
+  .login-div {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    margin-top: 2rem;
   }
   .page {
     min-height: calc(100vh - var(--nav-height));
