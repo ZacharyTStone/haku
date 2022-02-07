@@ -151,7 +151,7 @@ const Landing = () => {
                 <Link to="/register" className="btn btn-hero">
                   Login/Register
                 </Link>
-                <Link to="/register" className="btn btn-hero btn-danger">
+                <Link to="/register-demo" className="btn btn-hero btn-danger">
                   Demo
                 </Link>
               </div>
