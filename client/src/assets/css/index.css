@@ -14,16 +14,16 @@ html {
 
 :root {
   /* colors */
-  --primary-50: #e0fcff;
-  --primary-100: #bef8fd;
-  --primary-200: #87eaf2;
-  --primary-300: #54d1db;
-  --primary-400: #38bec9;
-  --primary-500: #2cb1bc;
-  --primary-600: #14919b;
-  --primary-700: #0e7c86;
-  --primary-800: #0a6c74;
-  --primary-900: #044e54;
+  --primary-50: #e0f3ff;
+  --primary-100: #bee5fd;
+  --primary-200: #87d2f2;
+  --primary-300: #54acdb;
+  --primary-400: #38a2c9;
+  --primary-500: #2c85bc;
+  --primary-600: #14739b;
+  --primary-700: #0e5c86;
+  --primary-800: #0a4b74;
+  --primary-900: #043554;
 
   /* grey */
   --grey-50: #f0f4f8;
@@ -39,8 +39,11 @@ html {
   /* rest of the colors */
   --black: #222;
   --white: #fff;
-  --red-light: #f8d7da;
-  --red-dark: #842029;
+  --yellow: #a5a317;
+  --yellow-light: #eae9d4;
+  --red-light: #e4d8d8;
+  --red-dark: #e16060f9;
+  --red-dark-opaque: rgb(189, 76, 76, 0.8);
   --green-light: #d1e7dd;
   --green-dark: #0f5132;
 
@@ -148,6 +151,8 @@ ul {
 
 .btn {
   margin-right: 20px;
+  margin-top: 20px;
+  /* margin-bottom: 20px; */
   cursor: pointer;
   color: var(--white);
   background: var(--primary-500);
@@ -158,8 +163,6 @@ ul {
   box-shadow: var(--shadow-2);
   transition: var(--transition);
   text-transform: capitalize;
-  display: flex;
-  width: fit-content;
 }
 .btn:hover {
   background: var(--primary-700);
@@ -171,7 +174,7 @@ ul {
 }
 .btn-hipster:hover {
   color: var(--primary-200);
-  background: var(--primary-700);
+  opacity: 0.7;
 }
 .btn-block {
   width: 100%;
@@ -181,8 +184,8 @@ ul {
   padding: 0.5rem 1.25rem;
 }
 .btn-danger {
-  background: var(--red-light);
-  color: var(--red-dark);
+  background: var(--grey-400);
+  color: var(--white);
 }
 .btn-danger:hover {
   background: var(--red-dark);

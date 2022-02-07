@@ -19,6 +19,7 @@ const AddJob = () => {
     clearValues,
     createJob,
     editJob,
+    notes,
   } = useAppContext();
 
   const handleSubmit = (e) => {
@@ -83,6 +84,12 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={jobTypeOptions}
           />
+          <FormRow
+            name="notes"
+            labelText="notes"
+            value={notes}
+            handleChange={handleJobInput}
+          />
           {/* btn container */}
           <div className="btn-container">
             <button
@@ -94,7 +101,7 @@ const AddJob = () => {
               submit
             </button>
             <button
-              className="btn btn-block clear-btn"
+              className="btn btn-block btn-danger"
               onClick={(e) => {
                 e.preventDefault();
                 clearValues();
@@ -143,16 +150,16 @@ const Wrapper = styled.section`
     grid-template-columns: 1fr 1fr;
     column-gap: 1rem;
     align-self: flex-end;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     button {
       height: 35px;
     }
   }
   .clear-btn {
-    background: var(--grey-500);
+    background: var(--grey-700);
   }
   .clear-btn:hover {
-    background: var(--black);
+    background: var(--red-dark);
   }
   @media (min-width: 992px) {
     .form-center {
@@ -169,7 +176,7 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr 1fr 1fr;
     }
     .form-center button {
-      margin-top: 0;
+      margin-top: 1rem;
     }
   }
 `;

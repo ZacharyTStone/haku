@@ -1,5 +1,6 @@
 import main from "../assets/images/main.svg";
 import computer from "../assets/images/computer.svg";
+import hello from "../assets/images/hello.svg";
 import thumb1 from "../assets/images/thumb1.png";
 import thumb2 from "../assets/images/thumb2.png";
 import thumb3 from "../assets/images/thumb3.png";
@@ -47,7 +48,7 @@ const Landing = () => {
               <Link to="/register" className="btn btn-hero">
                 Login/Register
               </Link>
-              <Link to="/register-demo" className="btn btn-hero btn-danger">
+              <Link to="/register-demo" className="btn btn-hero btn-hipster">
                 Demo
               </Link>
             </div>
@@ -182,7 +183,7 @@ const Landing = () => {
           </Slide>
         </div>
         <Fade>
-          <img src={computer} alt="job hunt" className="img main-img" />
+          <img src={hello} alt="job hunt" className="img main-img" />
         </Fade>
       </div>
     </Wrapper>

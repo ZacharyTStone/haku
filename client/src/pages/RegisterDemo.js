@@ -30,7 +30,7 @@ const Register = () => {
         "DEMO" +
         Math.floor(Math.random() * 100) +
         Math.floor(Math.random() * 100) +
-        "@gmail.com",
+        "@demo.com",
       password: "DEMO" + Math.floor(Math.random() * 100) + "DEMO",
       isMember: true,
     };

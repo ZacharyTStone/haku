@@ -13,6 +13,7 @@ const Job = ({
   jobType,
   createdAt,
   status,
+  notes,
 }) => {
   const { setEditJob, deleteJob } = useAppContext();
 
@@ -32,7 +33,17 @@ const Job = ({
           <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
           <JobInfo icon={<FaCalendarAlt />} text={date} />
           <JobInfo icon={<FaBriefcase />} text={jobType} />
-          <div className={`status ${status}`}>{status}</div>
+          <div
+            className={`status ${status}`}
+            style={{
+              marginTop: "10px",
+            }}
+          >
+            {status}
+          </div>
+          <div className="notes">
+            <p> {notes}</p>
+          </div>
         </div>
         <footer>
           <div className="actions">
@@ -99,8 +110,8 @@ const Wrapper = styled.article`
     }
   }
   .pending {
-    background: #fcefc7;
-    color: #e9b949;
+    background: var(--yellow-light);
+    color: var(--yellow);
   }
   .interview {
     background: #e0e8f9;
