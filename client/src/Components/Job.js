@@ -21,48 +21,49 @@ const Job = ({
   date = date.format("MMM Do, YYYY");
   return (
     <Wrapper>
-      <header>
-        <div className="main-icon">{company.charAt(0)}</div>
-        <div className="info">
-          <h5>{position}</h5>
-          <p>{company}</p>
-        </div>
-      </header>
-      <div className="content">
-        <div className="content-center">
-          <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
-          <JobInfo icon={<FaCalendarAlt />} text={date} />
-          <JobInfo icon={<FaBriefcase />} text={jobType} />
-          <div
-            className={`status ${status}`}
-            style={{
-              marginTop: "10px",
-            }}
-          >
-            {status}
+      <div className="job">
+        <header>
+          <div className="main-icon">{company.charAt(0)}</div>
+          <div className="info">
+            <h5>{position}</h5>
+            <p>{company}</p>
           </div>
-          <div className="notes">
-            <p> {notes}</p>
-          </div>
-        </div>
-        <footer>
-          <div className="actions">
-            <Link
-              to="/add-job"
-              className="btn edit-btn"
-              onClick={() => setEditJob(_id)}
+        </header>
+        <div className="content">
+          <div className="content-center">
+            <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
+            <JobInfo icon={<FaCalendarAlt />} text={date} />
+            <JobInfo icon={<FaBriefcase />} text={jobType} />
+            <div
+              style={{
+                marginTop: "10px",
+              }}
             >
-              Edit
-            </Link>
-            <button
-              type="button"
-              className="btn delete-btn"
-              onClick={() => deleteJob(_id)}
-            >
-              Delete
-            </button>
+              Job Status : <span className={`status ${status}`}>{status}</span>
+            </div>
+            <div className="notes">
+              <p>{notes}</p>
+            </div>
           </div>
-        </footer>
+          <footer>
+            <div className="actions">
+              <Link
+                to="/add-job"
+                className="btn edit-btn"
+                onClick={() => setEditJob(_id)}
+              >
+                Edit
+              </Link>
+              <button
+                type="button"
+                className="btn delete-btn"
+                onClick={() => deleteJob(_id)}
+              >
+                Delete
+              </button>
+            </div>
+          </footer>
+        </div>
       </div>
     </Wrapper>
   );
@@ -74,6 +75,25 @@ const Wrapper = styled.article`
   display: grid;
   grid-template-rows: 1fr auto;
   box-shadow: var(--shadow-2);
+  .job {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .notes {
+    padding: 1rem;
+    border-top: 1px solid var(--light-gray);
+    width: 100%;
+    display: flex;
+    height: auto;
+    flex-wrap: wrap;
+  }
+
+  p {
+    word-break: break-all;
+    white-space: normal;
+  }
 
   header {
     padding: 1rem 1.5rem;

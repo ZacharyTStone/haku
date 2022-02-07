@@ -2,6 +2,7 @@ import { useAppContext } from "../context/appContext";
 import NavLinks from "./NavLinks";
 import Logo from "./Logo";
 import styled from "styled-components";
+import { FaBitcoin } from "react-icons/fa";
 
 const BigSidebar = (props) => {
   const { showSidebar } = useAppContext();
@@ -13,10 +14,29 @@ const BigSidebar = (props) => {
         }
       >
         <div className="content">
-          <header>
-            <Logo />
-          </header>
-          <NavLinks />
+          <div className="top-half">
+            <header>
+              <Logo />
+            </header>
+            <NavLinks />
+          </div>
+          <div className="bottom-half ">
+            <div>
+              <span>Enjoy the app? </span>
+              <button className="btn btn-block btn-hipster">
+                <a
+                  href="https://commerce.coinbase.com/checkout/7bc346ee-f46f-49b0-bcbf-c237244712d7"
+                  target={"_blank"}
+                >
+                  <div>
+                    <FaBitcoin color="gold" />
+                    <span> Donate With Crypto </span>
+                    <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
+                  </div>
+                </a>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </Wrapper>
@@ -25,13 +45,20 @@ const BigSidebar = (props) => {
 
 const Wrapper = styled.aside`
   display: none;
+  .bottom-half {
+    padding: 20px;
+  }
   @media (min-width: 992px) {
+    a {
+      color: var(--white);
+      text-decoration: none;
+    }
     display: block;
     box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0.1);
     .sidebar-container {
       background: var(--white);
       min-height: 100vh;
-      height: 100%;
+      /* height: 100%; */
       width: 250px;
       margin-left: -250px;
       transition: var(--transition);
@@ -39,6 +66,10 @@ const Wrapper = styled.aside`
     .content {
       position: sticky;
       top: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
     }
     .show-sidebar {
       margin-left: 0;

@@ -38,13 +38,13 @@ html {
   --grey-900: #102a43;
   /* rest of the colors */
   --black: #222;
-  --white: #fff;
-  --yellow: #a5a317;
-  --yellow-light: #eae9d4;
+  --white: rgb(254, 254, 254);
+  --yellow: rgb(198, 198, 1);
+  --yellow-light: #f6f6e8;
   --red-light: #e4d8d8;
   --red-dark: #e16060f9;
   --red-dark-opaque: rgb(189, 76, 76, 0.8);
-  --green-light: #d1e7dd;
+  --green-light: #deede6;
   --green-dark: #0f5132;
 
   /* fonts  */
@@ -169,12 +169,13 @@ ul {
   box-shadow: var(--shadow-3);
 }
 .btn-hipster {
-  color: var(--primary-500);
-  background: var(--primary-200);
+  /* color: var(--primary-500); */
+  color: var(--white);
+  background: var(--primary-700);
 }
 .btn-hipster:hover {
   color: var(--primary-200);
-  opacity: 0.7;
+  /* background: var(--white); */
 }
 .btn-block {
   width: 100%;

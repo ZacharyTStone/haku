@@ -32,6 +32,11 @@ const JobSchema = new mongoose.Schema(
       ref: "User",
       required: [true, "Please provide user"],
     },
+    notes: {
+      type: String,
+      maxlength: 500,
+      required: false,
+    },
   },
   { timestamps: true }
 );

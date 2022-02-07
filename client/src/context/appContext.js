@@ -185,10 +185,12 @@ const AppProvider = ({ children }) => {
   const clearValues = () => {
     dispatch({ type: CLEAR_VALUES });
   };
+
   const createJob = async () => {
     dispatch({ type: CREATE_JOB_BEGIN });
     try {
       const { position, company, jobLocation, jobType, status, notes } = state;
+
       await authFetch.post("/jobs", {
         position,
         company,

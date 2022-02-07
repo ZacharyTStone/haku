@@ -1,6 +1,7 @@
 import { FormRow, FormRowSelect, Alert } from "../../Components";
 import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
+import FormRowArea from "../../Components/FormRowArea";
 
 const AddJob = () => {
   const {
@@ -84,13 +85,13 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={jobTypeOptions}
           />
-          <FormRow
+          <FormRowArea
             name="notes"
             labelText="notes"
             value={notes}
+            type="text"
             handleChange={handleJobInput}
           />
-          {/* btn container */}
           <div className="btn-container">
             <button
               type="submit"
