@@ -128,6 +128,7 @@ const reducer = (state, action) => {
       jobLocation: state.userLocation,
       jobType: "full-time",
       status: "pending",
+      notes: "",
     };
 
     return {

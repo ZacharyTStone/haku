@@ -21,7 +21,14 @@ const Navbar = () => {
           <h3 className="logo-text">dashboard</h3>
         </div>
 
-        <div className="btn-container">
+        <div
+          className="btn-container"
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
           <button
             className="btn"
             onClick={() => {
@@ -72,6 +79,10 @@ const Wrapper = styled.nav`
   background: var(--white);
   .btn-container {
     position: relative;
+    button {
+      margin-top: 0px;
+      margin-right: 0px;
+    }
   }
   .btn {
     display: flex;
@@ -84,7 +95,7 @@ const Wrapper = styled.nav`
 
   .dropdown {
     position: absolute;
-    top: 40px;
+    top: 30px;
     left: 0;
     width: 100%;
     background: var(--primary-100);

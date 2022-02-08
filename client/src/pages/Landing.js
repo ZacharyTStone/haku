@@ -15,6 +15,7 @@ import { FaSortAmountDown } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import ImageGallery from "react-image-gallery";
+import { AiFillDownCircle } from "react-icons/ai";
 
 const images = [
   {
@@ -57,15 +58,25 @@ const Landing = () => {
         <Fade>
           <img src={main} alt="job hunt" className="img main-img" />
         </Fade>
+        <a
+          href="#icon-row"
+          style={{
+            position: "absolute",
+            bottom: 75,
+            left: "50%",
+          }}
+        >
+          <AiFillDownCircle size={40} color="var(--primary-500)" />
+        </a>
       </div>
       <div className="container">
         <Fade>
-          <div className="features">
+          <div className="features" id="icon-row">
             <h3>
               {" "}
               <span>How do I use Hatarku?</span>
             </h3>
-            <Slide bottom>
+            <Slide left>
               <div className="icon-row">
                 <div className="icon">
                   <div className="icon-img">
@@ -207,10 +218,10 @@ const Wrapper = styled.main`
     margin-top: 2rem;
   }
   .page {
-    min-height: calc(100vh - var(--nav-height));
     display: grid;
     align-items: center;
     margin-top: -3rem;
+    height: 80vh;
   }
   .features {
     margin-top: 20px;
@@ -264,6 +275,7 @@ const Wrapper = styled.main`
     .page {
       grid-template-columns: 1fr 1fr;
       column-gap: 3rem;
+      min-height: calc(100vh - var(--nav-height));
     }
     .main-img {
       display: block;
