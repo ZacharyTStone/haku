@@ -58,16 +58,6 @@ const Landing = () => {
         <Fade>
           <img src={main} alt="job hunt" className="img main-img" />
         </Fade>
-        <a
-          href="#icon-row"
-          style={{
-            position: "absolute",
-            bottom: 75,
-            left: "50%",
-          }}
-        >
-          <AiFillDownCircle size={40} color="var(--primary-500)" />
-        </a>
       </div>
       <div className="container">
         <Fade>
@@ -221,7 +211,7 @@ const Wrapper = styled.main`
     display: grid;
     align-items: center;
     margin-top: -3rem;
-    height: 80vh;
+    height: 75vh;
   }
   .features {
     margin-top: 20px;
@@ -275,7 +265,7 @@ const Wrapper = styled.main`
     .page {
       grid-template-columns: 1fr 1fr;
       column-gap: 3rem;
-      min-height: calc(100vh - var(--nav-height));
+      min-height: calc(95vh - var(--nav-height));
     }
     .main-img {
       display: block;
