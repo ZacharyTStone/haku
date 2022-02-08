@@ -27,6 +27,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/register-demo" element={<RegisterDemo />} />
         <Route path="/landing" element={<Landing />} />
+        <Route path="landing#icon-row" element={<Landing />} />
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
