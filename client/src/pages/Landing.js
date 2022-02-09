@@ -16,7 +16,6 @@ import { FaSortAmountDown } from "react-icons/fa";
 import { FaCheck } from "react-icons/fa";
 import { FaArrowCircleRight } from "react-icons/fa";
 import ImageGallery from "react-image-gallery";
-import { AiFillDownCircle } from "react-icons/ai";
 
 const images = [
   {

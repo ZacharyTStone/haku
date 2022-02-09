@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { FormRow } from "../../Components";
 import React, { useState, useEffect } from "react";
 import { FormRowSelect } from "../../Components";
-
+import axios from "axios";
 const Tools = () => {
   const { isLoading } = useAppContext();
   const [salary, setSalary] = useState("");
@@ -13,12 +13,9 @@ const Tools = () => {
   const [targetCurrency, setTargetCurrency] = useState("EUR");
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [currData, setCurrData] = useState([]);
+  const [quotes, setQuotes] = useState("Todays Quote");
 
   useEffect(() => {
-    console.log(
-      "https://openexchangerates.org/api/latest.json?app_id=" +
-        process.env.REACT_APP_RATE_API
-    );
     fetch(
       "https://openexchangerates.org/api/latest.json?app_id=" +
         process.env.REACT_APP_RATE_API
