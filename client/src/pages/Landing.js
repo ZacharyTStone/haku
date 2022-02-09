@@ -4,6 +4,7 @@ import hello from "../assets/images/hello.svg";
 import thumb1 from "../assets/images/thumb1.png";
 import thumb2 from "../assets/images/thumb2.png";
 import thumb3 from "../assets/images/thumb3.png";
+import thumb4 from "../assets/images/thumb4.png";
 import { Logo } from "../Components";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
@@ -19,16 +20,20 @@ import { AiFillDownCircle } from "react-icons/ai";
 
 const images = [
   {
-    original: "https://media.giphy.com/media/T8pwFSeXDDPqPC6RgD/giphy.gif",
+    original: thumb1,
     thumbnail: thumb1,
   },
   {
-    original: "https://media.giphy.com/media/I5keJnTdjbOCGyeeTT/giphy.gif",
+    original: thumb2,
     thumbnail: thumb2,
   },
   {
-    original: "https://media.giphy.com/media/PFm3Ow1Xt2rkI5F0fY/giphy.gif",
+    original: thumb3,
     thumbnail: thumb3,
+  },
+  {
+    original: thumb4,
+    thumbnail: thumb4,
   },
 ];
 
@@ -44,7 +49,11 @@ const Landing = () => {
             <h1>
               Hataraku <span> job tracker</span>
             </h1>
-            <p>Take charge of the interview process and land that dream job!</p>
+            <p>
+              {" "}
+              Hataraku prounounced "Haw-tah-raw-ku" , is the Japanese verb "to
+              work". Let's track your interviews and land that dream job!
+            </p>
             <div className="login-div">
               <Link to="/register" className="btn btn-hero">
                 Login/Register
@@ -145,10 +154,7 @@ const Landing = () => {
         <div>
           <Slide right>
             <div>
-              <h3>
-                Time to take charge of the interview process and land that dream
-                job!
-              </h3>
+              <h3>Time to land that dream job!</h3>
               <div className="login-div">
                 <Link to="/register" className="btn btn-hero">
                   Login/Register

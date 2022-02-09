@@ -1,4 +1,5 @@
 import { FormRow, FormRowSelect, Alert } from "../../Components";
+import FormRowArea from "../../Components/FormRowArea";
 import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
 
@@ -84,7 +85,7 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={jobTypeOptions}
           />
-          <FormRow
+          <FormRowArea
             name="notes"
             labelText="notes"
             value={notes}

@@ -29,7 +29,8 @@ const Register = () => {
       email:
         "DEMO" +
         Math.floor(Math.random() * 100) +
-        Math.floor(Math.random() * 100) +
+        Math.floor(Math.random() * 101) +
+        Math.floor(Math.random() * 102) +
         "@demo.com",
       password: "DEMO" + Math.floor(Math.random() * 100) + "DEMO",
       isMember: true,
