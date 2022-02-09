@@ -46,13 +46,11 @@ const Landing = () => {
         <div>
           <Slide left>
             <h1>
-              Hataraku <span> job tracker</span>
+              Haku <span> job tracker</span>
             </h1>
             <p>
-              {" "}
-              Hataraku prounounced "ha-ta-raw-ku" , is the Japanese verb "to
-              work". Use Hataraku to track your interviews and land that dream
-              job!
+              Haku pronounced "ha koo" is an application that let's you track,
+              and compare jobs during the the interview process.
             </p>
             <div className="login-div">
               <Link to="/register" className="btn btn-hero">
@@ -73,7 +71,7 @@ const Landing = () => {
           <div className="features" id="icon-row">
             <h3>
               {" "}
-              <span>How do I use Hataraku?</span>
+              <span>How do I use Haku?</span>
             </h3>
             <Slide left>
               <div className="icon-row">
@@ -98,7 +96,7 @@ const Landing = () => {
                 <div className="icon">
                   <FaSortAmountDown size={"50px"} color="var(--primary-500)" />
                   <p>
-                    <span>3.</span> Use Hataraku's built in tools to compare and
+                    <span>3.</span> Use Haku's built in tools to compare and
                     contrast job offers.
                   </p>
                 </div>
@@ -114,7 +112,7 @@ const Landing = () => {
         <div>
           <Slide right>
             <h3>
-              <span> Why use Hataraku?</span>
+              <span> Why use Haku?</span>
             </h3>
             <ul>
               <li>
@@ -145,7 +143,7 @@ const Landing = () => {
           }}
         >
           <h3 style={{ textAlign: "center" }}>
-            <span>Hataraku in action!</span>
+            <span>Haku in action!</span>
           </h3>
           <ImageGallery items={images} showNav={false} />
         </div>
