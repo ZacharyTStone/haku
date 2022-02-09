@@ -153,7 +153,7 @@ const Landing = () => {
                 <Link to="/register" className="btn btn-hero">
                   Login/Register
                 </Link>
-                <Link to="/register-demo" className="btn btn-hero btn-danger">
+                <Link to="/register-demo" className="btn btn-hero btn-hipster">
                   Demo
                 </Link>
               </div>
@@ -193,6 +193,9 @@ const Landing = () => {
 export default Landing;
 
 const Wrapper = styled.main`
+  .btn:hover {
+    transform: scale(1.1);
+  }
   nav {
     width: var(--fluid-width);
     max-width: var(--max-width);
@@ -211,7 +214,7 @@ const Wrapper = styled.main`
     display: grid;
     align-items: center;
     margin-top: -3rem;
-    height: 75vh;
+    height: 80vh;
   }
   .features {
     margin-top: 20px;
@@ -265,7 +268,7 @@ const Wrapper = styled.main`
     .page {
       grid-template-columns: 1fr 1fr;
       column-gap: 3rem;
-      min-height: calc(95vh - var(--nav-height));
+      min-height: 90fvh;
     }
     .main-img {
       display: block;

@@ -1,7 +1,6 @@
 import { FormRow, FormRowSelect, Alert } from "../../Components";
 import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
-import FormRowArea from "../../Components/FormRowArea";
 
 const AddJob = () => {
   const {
@@ -85,13 +84,13 @@ const AddJob = () => {
             handleChange={handleJobInput}
             list={jobTypeOptions}
           />
-          <FormRowArea
+          <FormRow
             name="notes"
             labelText="notes"
             value={notes}
-            type="text"
             handleChange={handleJobInput}
           />
+          {/* btn container */}
           <div className="btn-container">
             <button
               type="submit"
@@ -102,7 +101,7 @@ const AddJob = () => {
               submit
             </button>
             <button
-              className="btn btn-block btn-danger"
+              className="btn btn-block btn-hipster"
               onClick={(e) => {
                 e.preventDefault();
                 clearValues();
@@ -118,6 +117,13 @@ const AddJob = () => {
 };
 
 const Wrapper = styled.section`
+  .btn-hipster {
+    opacity: 0.7;
+  }
+  .btn:hover {
+    /* opacity: 1; */
+    transform: scale(1.1);
+  }
   border-radius: var(--borderRadius);
   width: 100%;
   background: var(--white);
@@ -177,7 +183,7 @@ const Wrapper = styled.section`
       grid-template-columns: 1fr 1fr 1fr;
     }
     .form-center button {
-      margin-top: 1rem;
+      margin-top: 20px;
     }
   }
 `;

@@ -60,7 +60,7 @@ const SearchContainer = () => {
             list={sortOptions}
           />
           <button
-            className="btn btn-block btn-danger"
+            className="btn btn-block btn-hipster"
             disabled={isLoading}
             onClick={handleSubmit}
           >

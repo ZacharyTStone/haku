@@ -12,7 +12,7 @@ const StatsContainer = () => {
       count: stats.pending || 0,
       icon: <FaSuitcaseRolling />,
       // color: "#BDBA19",
-      color: "var(--yellow)",
+      color: "var(--yellow-dark)",
       bcg: "var(--yellow-light)",
     },
     {

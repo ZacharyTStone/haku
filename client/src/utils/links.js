@@ -2,8 +2,9 @@ import { IoBarChartSharp } from "react-icons/io5";
 import { MdQueryStats } from "react-icons/md";
 import { FaWpforms } from "react-icons/fa";
 import { ImProfile } from "react-icons/im";
+import { GoTools } from "react-icons/go";
 
-// will be mapped to the routes in App.js
+// will be mapped to the routes in App.js and nav links in NavLinks.js
 
 const links = [
   {
@@ -26,6 +27,13 @@ const links = [
   },
   {
     id: 4,
+    text: "tools",
+    path: "tools",
+    icon: <GoTools />,
+  },
+
+  {
+    id: 5,
     text: "profile",
     path: "profile",
     icon: <ImProfile />,

@@ -3,6 +3,7 @@ import NavLinks from "./NavLinks";
 import Logo from "./Logo";
 import styled from "styled-components";
 import { FaBitcoin } from "react-icons/fa";
+import { BiCoffeeTogo } from "react-icons/bi";
 
 const BigSidebar = (props) => {
   const { showSidebar } = useAppContext();
@@ -22,14 +23,25 @@ const BigSidebar = (props) => {
           </div>
           <div className="bottom-half ">
             <div>
-              <span>Enjoy the app? </span>
+              <span>Enjoy the app?</span>
+              <button className="btn btn-block btn-hipster">
+                <a
+                  href="https://www.buymeacoffee.com/zachinjapan"
+                  target={"_blank"}
+                >
+                  <div>
+                    <BiCoffeeTogo color="var(--primary-500)" />
+                    <span> Buy me a coffee </span>
+                  </div>
+                </a>
+              </button>
               <button className="btn btn-block btn-hipster">
                 <a
                   href="https://commerce.coinbase.com/checkout/7bc346ee-f46f-49b0-bcbf-c237244712d7"
                   target={"_blank"}
                 >
                   <div>
-                    <FaBitcoin color="gold" />
+                    <FaBitcoin color="var(--primary-500)" />
                     <span> Donate With Crypto </span>
                     <script src="https://commerce.coinbase.com/v1/checkout.js?version=201807"></script>
                   </div>
@@ -44,13 +56,22 @@ const BigSidebar = (props) => {
 };
 
 const Wrapper = styled.aside`
+  .btn {
+    opacity: 0.7;
+  }
+  .btn:hover {
+    transform: scale(1.1);
+    opacity: 1;
+  }
   display: none;
   .bottom-half {
     padding: 20px;
+    button {
+      margin-top: 5px;
+    }
   }
   @media (min-width: 992px) {
     a {
-      color: var(--white);
       text-decoration: none;
     }
     display: block;
@@ -58,7 +79,7 @@ const Wrapper = styled.aside`
     .sidebar-container {
       background: var(--white);
       min-height: 100vh;
-      /* height: 100%; */
+      height: 100%;
       width: 250px;
       margin-left: -250px;
       transition: var(--transition);

@@ -4,6 +4,7 @@ import AddJob from "./pages/Dashboard/AddJob";
 import AllJobs from "./pages/Dashboard/AllJobs";
 import Stats from "./pages/Dashboard/Stats";
 import Profile from "./pages/Dashboard/Profile";
+import Tools from "./pages/Dashboard/Tools";
 import SharedLayout from "./pages/Dashboard/SharedLayout";
 import RegisterDemo from "./pages/RegisterDemo";
 
@@ -22,6 +23,7 @@ function App() {
           <Route index element={<Stats />} />
           <Route path="all-jobs" element={<AllJobs />} />
           <Route path="add-job" element={<AddJob />} />
+          <Route path="tools" element={<Tools />} />
           <Route path="profile" element={<Profile />} />
         </Route>
         <Route path="/register" element={<Register />} />
