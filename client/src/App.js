@@ -7,7 +7,6 @@ import Profile from "./pages/Dashboard/Profile";
 import Tools from "./pages/Dashboard/Tools";
 import SharedLayout from "./pages/Dashboard/SharedLayout";
 import RegisterDemo from "./pages/RegisterDemo";
-import Helmet from "helmet";
 
 function App() {
   return (
