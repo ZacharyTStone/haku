@@ -37,7 +37,7 @@ const BigSidebar = (props) => {
               </button>
               <button className="btn btn-block btn-hipster">
                 <a
-                  href="https://commerce.coinbase.com/checkout/7bc346ee-f46f-49b0-bcbf-c237244712d7"
+                  href="https://commerce.coinbase.com/checkout/afcceb62-6c0f-4b12-89bc-4a085d328df5"
                   target={"_blank"}
                 >
                   <div>
