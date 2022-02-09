@@ -202,24 +202,21 @@ const Landing = () => {
                     marginTop: "2rem",
                   }}
                 >
-                  For all inquieres please contact Zach Stone at ZStone.dev
-                </h5>
-                <div>
+                  For all inquieres please contact Zach Stone at{" "}
                   <span>
-                    <FaArrowCircleRight />
                     <a
                       href="https://zstone.dev"
                       target={"_blank"}
                       rel="noreferrer"
                       style={{
-                        textDecoration: "none",
+                        textDecoration: "underline",
                         color: "black",
                       }}
                     >
-                      Click Here
-                    </a>{" "}
+                      ZStone.dev
+                    </a>
                   </span>
-                </div>
+                </h5>
               </div>
             </Slide>
           </div>
