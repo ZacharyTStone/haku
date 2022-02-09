@@ -50,8 +50,9 @@ const Landing = () => {
             </h1>
             <p>
               {" "}
-              Hataraku prounounced "Haw-tah-raw-ku" , is the Japanese verb "to
-              work". Let's track your interviews and land that dream job!
+              Hataraku prounounced "ha-ta-raw-ku" , is the Japanese verb "to
+              work". Use Hataraku to track your interviews and land that dream
+              job!
             </p>
             <div className="login-div">
               <Link to="/register" className="btn btn-hero">
@@ -72,7 +73,7 @@ const Landing = () => {
           <div className="features" id="icon-row">
             <h3>
               {" "}
-              <span>How do I use Hatarku?</span>
+              <span>How do I use Hataraku?</span>
             </h3>
             <Slide left>
               <div className="icon-row">
@@ -144,7 +145,7 @@ const Landing = () => {
           }}
         >
           <h3 style={{ textAlign: "center" }}>
-            <span>Hatarku in action!</span>
+            <span>Hataraku in action!</span>
           </h3>
           <ImageGallery items={images} showNav={false} />
         </div>
