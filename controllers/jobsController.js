@@ -20,7 +20,7 @@ const createJob = async (req, res) => {
   console.log(job);
 };
 const getAllJobs = async (req, res) => {
-  const { status, jobType, sort, search } = req.query;
+  const { status, jobType, stared, sort, search } = req.query;
 
   const queryObject = {
     createdBy: req.user.userId,
@@ -32,6 +32,9 @@ const getAllJobs = async (req, res) => {
   }
   if (jobType && jobType !== "all") {
     queryObject.jobType = jobType;
+  }
+  if (stared && stared !== "all") {
+    queryObject.stared = stared;
   }
   if (search) {
     queryObject.position = { $regex: search, $options: "i" };

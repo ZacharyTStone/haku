@@ -37,6 +37,12 @@ const JobSchema = new mongoose.Schema(
       maxlength: 500,
       required: false,
     },
+    stared: {
+      type: String,
+      maxlength: 20,
+      default: false,
+      required: false,
+    },
   },
   { timestamps: true }
 );

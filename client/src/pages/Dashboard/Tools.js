@@ -4,18 +4,18 @@ import styled from "styled-components";
 import { FormRow } from "../../Components";
 import React, { useState, useEffect } from "react";
 import { FormRowSelect } from "../../Components";
-import axios from "axios";
+
 const Tools = () => {
-  const { isLoading } = useAppContext();
+  const { isLoading, jobs, getJobs } = useAppContext();
   const [salary, setSalary] = useState("");
   const [error, setError] = useState(false);
   const [baseCurrency, setBaseCurrency] = useState("USD");
   const [targetCurrency, setTargetCurrency] = useState("EUR");
   const [currencyOptions, setCurrencyOptions] = useState([]);
   const [currData, setCurrData] = useState([]);
-  const [quotes, setQuotes] = useState("Todays Quote");
 
   useEffect(() => {
+    getJobs();
     fetch(
       "https://openexchangerates.org/api/latest.json?app_id=" +
         process.env.REACT_APP_RATE_API
@@ -115,12 +115,32 @@ const Tools = () => {
             </li>
           </ul>
         </div>
+        <div className="form all-jobs">
+          <h3>All Jobs</h3>
+          <ol>
+            {jobs.map((job) => {
+              console.log(job);
+              return (
+                <li>
+                  <span>
+                    {job.position}:{job.company}
+                  </span>
+                  <span> | {job.jobLocation}</span>
+                  <span> | {job.createdAt.slice(0, 10)}</span>
+                </li>
+              );
+            })}
+          </ol>
+        </div>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+  .all-jobs {
+    user-select: all;
+  }
   .tools {
     padding: 1rem;
     min-width: 100%;
