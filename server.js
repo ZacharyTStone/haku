@@ -3,6 +3,7 @@ const app = express();
 import dotenv from "dotenv";
 dotenv.config();
 import "express-async-errors";
+import rateLimiter from "express-rate-limit";
 import morgan from "morgan";
 
 import { dirname } from "path";
@@ -30,6 +31,17 @@ if (process.env.NODE_ENV !== "production") {
 }
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// rate limiter
+// ßmaximum of five requests per minute
+
+const getLimiter = rateLimiter({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 5,
+});
+
+// apply rate limiter to all requests
+app.use(getLimiter);
 
 // only when ready to deploy
 app.use(express.static(path.resolve(__dirname, "./client/build")));
