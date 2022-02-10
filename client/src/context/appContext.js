@@ -61,10 +61,13 @@ const initialState = {
   monthlyApplications: [],
   search: "",
   searchStatus: "all",
+  searchStared: "all",
   searchType: "all",
   sort: "latest",
   sortOptions: ["latest", "oldest", "a-z", "z-a"],
   notes: "",
+  stared: "false",
+  staredOptions: ["true", "false"],
 };
 
 const AppContext = React.createContext();
@@ -189,7 +192,8 @@ const AppProvider = ({ children }) => {
   const createJob = async () => {
     dispatch({ type: CREATE_JOB_BEGIN });
     try {
-      const { position, company, jobLocation, jobType, status, notes } = state;
+      const { position, company, jobLocation, jobType, status, notes, stared } =
+        state;
 
       await authFetch.post("/jobs", {
         position,
@@ -198,6 +202,7 @@ const AppProvider = ({ children }) => {
         jobType,
         status,
         notes,
+        stared,
       });
       dispatch({ type: CREATE_JOB_SUCCESS });
       dispatch({ type: CLEAR_VALUES });
@@ -212,9 +217,10 @@ const AppProvider = ({ children }) => {
   };
 
   const getJobs = async () => {
-    const { page, search, searchStatus, searchType, sort } = state;
+    const { page, search, searchStatus, searchType, searchStared, sort } =
+      state;
 
-    let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&sort=${sort}`;
+    let url = `/jobs?page=${page}&status=${searchStatus}&jobType=${searchType}&stared=${searchStared}&sort=${sort}`;
     if (search) {
       url = url + `&search=${search}`;
     }
@@ -243,7 +249,8 @@ const AppProvider = ({ children }) => {
     dispatch({ type: EDIT_JOB_BEGIN });
 
     try {
-      const { position, company, jobLocation, jobType, status, notes } = state;
+      const { position, company, jobLocation, jobType, status, notes, stared } =
+        state;
       await authFetch.patch(`/jobs/${state.editJobId}`, {
         company,
         position,
@@ -251,6 +258,7 @@ const AppProvider = ({ children }) => {
         jobType,
         status,
         notes,
+        stared,
       });
       dispatch({ type: EDIT_JOB_SUCCESS });
       dispatch({ type: CLEAR_VALUES });

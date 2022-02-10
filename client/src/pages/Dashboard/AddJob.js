@@ -2,8 +2,12 @@ import { FormRow, FormRowSelect, Alert } from "../../Components";
 import FormRowArea from "../../Components/FormRowArea";
 import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
+import { FaStar } from "react-icons/fa";
+import React, { useState } from "react";
 
 const AddJob = () => {
+  const [starState, setStarState] = useState(false);
+
   const {
     isLoading,
     isEditing,
@@ -21,6 +25,7 @@ const AddJob = () => {
     createJob,
     editJob,
     notes,
+    stared,
   } = useAppContext();
 
   const handleSubmit = (e) => {
@@ -111,6 +116,23 @@ const AddJob = () => {
               clear
             </button>
           </div>
+          <div className="star">
+            <FaStar
+              color={stared === "false" ? "gray" : "gold"}
+              value={stared}
+              size={30}
+              style={{
+                marginTop: "20px",
+              }}
+              name="stared"
+              onClick={() => {
+                handleChange({
+                  name: "stared",
+                  value: stared === "true" ? "false" : "true",
+                });
+              }}
+            />
+          </div>
         </div>
       </form>
     </Wrapper>
@@ -118,6 +140,18 @@ const AddJob = () => {
 };
 
 const Wrapper = styled.section`
+  .star {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    /* padding-top: 20px; */
+    width: 100%;
+
+    h5 {
+      margin-bottom: 0px;
+    }
+  }
   .btn-hipster {
     opacity: 0.7;
   }
