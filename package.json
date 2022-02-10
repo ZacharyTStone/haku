@@ -1,6 +1,6 @@
 {
   "name": "hataraku",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A job tracking application",
   "main": "index.js",
   "type": "module",
@@ -40,6 +40,6 @@
     "xss-clean": "^0.1.1"
   },
   "engines": {
-    "node": "16.x"
+    "node": "17.2.0"
   }
 }
