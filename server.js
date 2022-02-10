@@ -37,11 +37,8 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const getLimiter = rateLimiter({
   windowMs: 1 * 60 * 1000, // 1 minute
-  max: 5,
+  max: 50,
 });
-
-// apply rate limiter to all requests
-app.use(getLimiter);
 
 // only when ready to deploy
 app.use(express.static(path.resolve(__dirname, "./client/build")));
@@ -58,9 +55,13 @@ app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobsRouter);
 
 // only when ready to deploy
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
-});
+app.get(
+  "*",
+  (req, res) => {
+    res.sendFile(path.resolve(__dirname, "./client/build", "index.html"));
+  },
+  getLimiter
+);
 
 app.use(notFoundMiddleware);
 app.use(errorHandlerMiddleware);
