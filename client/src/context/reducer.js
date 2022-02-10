@@ -129,6 +129,7 @@ const reducer = (state, action) => {
       jobType: "full-time",
       status: "pending",
       notes: "",
+      stared: "false",
     };
 
     return {
@@ -172,7 +173,16 @@ const reducer = (state, action) => {
   }
   if (action.type === SET_EDIT_JOB) {
     const job = state.jobs.find((job) => job._id === action.payload.id);
-    const { _id, position, company, jobLocation, jobType, status, notes } = job;
+    const {
+      _id,
+      position,
+      company,
+      jobLocation,
+      jobType,
+      status,
+      notes,
+      stared,
+    } = job;
     return {
       ...state,
       isEditing: true,
@@ -183,6 +193,7 @@ const reducer = (state, action) => {
       jobType,
       status,
       notes,
+      stared,
     };
   }
   if (action.type === DELETE_JOB_BEGIN) {

@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { useAppContext } from "../context/appContext";
 import JobInfo from "./JobInfo";
 import styled from "styled-components";
+import { FaStar } from "react-icons/fa";
 
 const Job = ({
   _id,
@@ -14,6 +15,7 @@ const Job = ({
   createdAt,
   status,
   notes,
+  stared,
 }) => {
   const { setEditJob, deleteJob } = useAppContext();
 
@@ -24,8 +26,14 @@ const Job = ({
       <div className="job">
         <header>
           <div className="main-icon">{company.charAt(0)}</div>
+
           <div className="info">
-            <h5>{position}</h5>
+            <h5>
+              {position}
+              {stared === "true" ? (
+                <FaStar color="gold" size={18} style={{ paddingTop: "5px" }} />
+              ) : null}{" "}
+            </h5>
             <p>{company}</p>
           </div>
         </header>
@@ -118,6 +126,11 @@ const Wrapper = styled.article`
     color: var(--white);
     margin-right: 2rem;
   }
+
+  .stared {
+    background: "white";
+  }
+
   .info {
     h5 {
       margin-bottom: 0.25rem;
