@@ -42,10 +42,10 @@ const images = [
 const Landing = () => {
   useEffect(() => {
     toast.success(
-      "We are currently in beta, please report any bugs you find at Zach.Stone.Developer@gmail.com. Thank you!",
+      "Hi! 👋 This app is currently in development. Want me to add a feature? Let me know at Zach.Stone.Developer@gmail.com",
       {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 6000,
         hideProgressBar: true,
         closeOnClick: true,
         pauseOnHover: true,
