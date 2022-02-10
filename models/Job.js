@@ -34,7 +34,7 @@ const JobSchema = new mongoose.Schema(
     },
     notes: {
       type: String,
-      maxlength: 500,
+      maxlength: 300,
       required: false,
     },
     stared: {

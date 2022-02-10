@@ -7,8 +7,8 @@ const FormRowArea = ({ labelText, name, value, handleChange, type }) => {
       <div className="form-row">
         <label htmlFor={name} className="form-label">
           {labelText || name}{" "}
-          <span className={500 - value.length >= 0 ? "blue" : "red"}>
-            * {500 - value.length} characters left
+          <span className={300 - value.length >= 0 ? "blue" : "red"}>
+            * {300 - value.length} characters left
           </span>
         </label>
         <textarea
