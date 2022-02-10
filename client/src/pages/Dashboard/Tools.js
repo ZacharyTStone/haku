@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { FormRow } from "../../Components";
 import React, { useState, useEffect } from "react";
 import { FormRowSelect } from "../../Components";
+import Calculator from "../../Components/Calculator";
 
 const Tools = () => {
   const { isLoading, jobs, getJobs } = useAppContext();
@@ -45,7 +46,7 @@ const Tools = () => {
         <div className="form">
           <h3>
             {error
-              ? "Sorry! The free level of the API I use has been reached. Please try again later."
+              ? "Sorry! The free tier of the currency API I use has hit it's limit Please try again later."
               : "Currency Converter"}
           </h3>
           <form className="form-center">
@@ -113,6 +114,15 @@ const Tools = () => {
                 Glassdoor{" "}
               </a>
             </li>
+
+            <li>
+              <a
+                href="https://www.indeed.com/career-advice/interviewing/questions-to-ask-yourself-before-a-job-interview"
+                target="_blank"
+              >
+                5 Questions to Ask Yourself Before a Job Interview
+              </a>
+            </li>
           </ul>
         </div>
         <div className="form all-jobs">
@@ -132,12 +142,18 @@ const Tools = () => {
             })}
           </ol>
         </div>
+        <div className="form calculator">
+          <Calculator />
+        </div>
       </div>
     </Wrapper>
   );
 };
 
 const Wrapper = styled.div`
+  .calculator {
+    height: 500px;
+  }
   .all-jobs {
     user-select: all;
   }
