@@ -5,7 +5,10 @@
     "jobLocation": "Meedhoo",
     "jobType": "internship",
     "status": "declined",
-    "createdAt": "2021-09-21T13:15:15Z"
+    "createdAt": "2021-09-21T13:15:15Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Welch, Rolfson and Sanford",
@@ -13,7 +16,9 @@
     "jobLocation": "Qiqin",
     "jobType": "internship",
     "status": "declined",
-    "createdAt": "2021-09-14T17:35:46Z"
+    "createdAt": "2021-09-14T17:35:46Z",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Kulas, Rippin and Gottlieb",
@@ -21,7 +26,10 @@
     "jobLocation": "Gozdowo",
     "jobType": "part-time",
     "status": "pending",
-    "createdAt": "2021-12-05T02:23:38Z"
+    "createdAt": "2021-12-05T02:23:38Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Tremblay LLC",
@@ -29,7 +37,10 @@
     "jobLocation": "Riah",
     "jobType": "full-time",
     "status": "pending",
-    "createdAt": "2020-12-11T07:30:46Z"
+    "createdAt": "2020-12-11T07:30:46Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Terry, Yost and McKenzie",
@@ -37,8 +48,11 @@
     "jobLocation": "Coxim",
     "jobType": "remote",
     "status": "declined",
+    "stared": "false",
 
-    "createdAt": "2021-04-02T14:46:52Z"
+    "createdAt": "2021-04-02T14:46:52Z",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Wiza Inc",
@@ -47,7 +61,10 @@
     "jobType": "full-time",
     "status": "declined",
 
-    "createdAt": "2021-02-21T22:20:34Z"
+    "createdAt": "2021-02-21T22:20:34Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Murphy, Mante and Mueller",
@@ -55,8 +72,11 @@
     "jobLocation": "Ajoyani",
     "jobType": "part-time",
     "status": "interview",
+    "stared": "false",
 
-    "createdAt": "2021-04-02T16:48:49Z"
+    "createdAt": "2021-04-02T16:48:49Z",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Langosh Group",
@@ -64,7 +84,10 @@
     "jobLocation": "Qingjiang",
     "jobType": "internship",
     "status": "interview",
-    "createdAt": "2021-12-12T05:58:53Z"
+    "createdAt": "2021-12-12T05:58:53Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Zemlak LLC",
@@ -72,7 +95,10 @@
     "jobLocation": "Grand Rapids",
     "jobType": "full-time",
     "status": "declined",
-    "createdAt": "2021-11-07T00:01:46Z"
+    "createdAt": "2021-11-07T00:01:46Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Conroy-Hyatt",
@@ -80,7 +106,10 @@
     "jobLocation": "Kokhanava",
     "jobType": "remote",
     "status": "pending",
-    "createdAt": "2021-05-12T06:46:28Z"
+    "createdAt": "2021-05-12T06:46:28Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Kessler, Jacobs and Maggio",
@@ -88,7 +117,10 @@
     "jobLocation": "Lidingö",
     "jobType": "full-time",
     "status": "declined",
-    "createdAt": "2021-09-05T09:23:30Z"
+    "createdAt": "2021-09-05T09:23:30Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Turcotte LLC",
@@ -96,7 +128,10 @@
     "jobLocation": "Seminole",
     "jobType": "part-time",
     "status": "pending",
-    "createdAt": "2021-01-10T23:31:45Z"
+    "createdAt": "2021-01-10T23:31:45Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Borer, Armstrong and Hessel",
@@ -104,7 +139,10 @@
     "jobLocation": "Santa Teresita",
     "jobType": "remote",
     "status": "pending",
-    "createdAt": "2021-07-01T07:58:15Z"
+    "createdAt": "2021-07-01T07:58:15Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Leannon-Bauch",
@@ -112,7 +150,10 @@
     "jobLocation": "São Luiz Gonzaga",
     "jobType": "internship",
     "status": "interview",
-    "createdAt": "2021-05-03T17:04:39Z"
+    "createdAt": "2021-05-03T17:04:39Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Altenwerth and Sons",
@@ -120,7 +161,10 @@
     "jobLocation": "Nayak",
     "jobType": "full-time",
     "status": "declined",
-    "createdAt": "2021-02-22T15:16:51Z"
+    "createdAt": "2021-02-22T15:16:51Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Smith-Sporer",
@@ -128,7 +172,10 @@
     "jobLocation": "Yaypan",
     "jobType": "full-time",
     "status": "declined",
-    "createdAt": "2021-05-06T13:02:45Z"
+    "createdAt": "2021-05-06T13:02:45Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Bruen, Price and Kirlin",
@@ -136,7 +183,10 @@
     "jobLocation": "Newala Kisimani",
     "jobType": "part-time",
     "status": "declined",
-    "createdAt": "2021-06-27T09:41:00Z"
+    "createdAt": "2021-06-27T09:41:00Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Little, Wyman and Robel",
@@ -144,7 +194,10 @@
     "jobLocation": "Enskede",
     "jobType": "remote",
     "status": "declined",
-    "createdAt": "2022-01-04T05:54:01Z"
+    "createdAt": "2022-01-04T05:54:01Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Bogisich, Abshire and Casper",
@@ -152,7 +205,10 @@
     "jobLocation": "Keruguya",
     "jobType": "internship",
     "status": "interview",
-    "createdAt": "2022-01-16T14:30:43Z"
+    "createdAt": "2022-01-16T14:30:43Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Wiza-Mohr",
@@ -160,7 +216,10 @@
     "jobLocation": "Merton",
     "jobType": "part-time",
     "status": "declined",
-    "createdAt": "2021-04-04T02:16:27Z"
+    "createdAt": "2021-04-04T02:16:27Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "Brakus, Jacobi and Block",
@@ -168,7 +227,10 @@
     "jobLocation": "Krajan Kerjo",
     "jobType": "remote",
     "status": "pending",
-    "createdAt": "2020-12-09T15:21:47Z"
+    "createdAt": "2020-12-09T15:21:47Z",
+    "createdBy": "61f297678ef01206cb9079f1",
+    "stared": "false",
+    "notes": ""
   },
   {
     "company": "Leannon, Considine and Larson",
@@ -176,7 +238,10 @@
     "jobLocation": "Noeltoko",
     "jobType": "remote",
     "status": "declined",
-    "createdAt": "2021-10-09T23:14:44Z"
+    "createdAt": "2021-10-09T23:14:44Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   },
   {
     "company": "DuBuque-Wyman",
@@ -184,94 +249,9 @@
     "jobLocation": "Tashkent",
     "jobType": "remote",
     "status": "declined",
-    "createdAt": "2021-02-23T22:09:04Z"
-  },
-  {
-    "company": "Jast Inc",
-    "position": "Business Systems Development Analyst",
-    "jobLocation": "Roboré",
-    "jobType": "internship",
-    "status": "pending",
-    "createdAt": "2022-01-05T22:48:56Z"
-  },
-  {
-    "company": "Terry-Sanford",
-    "position": "Internal Auditor",
-    "jobLocation": "Hveragerði",
-    "jobType": "part-time",
-    "status": "declined",
-    "createdAt": "2022-01-19T16:37:10Z"
-  },
-  {
-    "company": "Hamill LLC",
-    "position": "Staff Scientist",
-    "jobLocation": "Liangyaping",
-    "jobType": "full-time",
-    "status": "declined",
-    "createdAt": "2021-10-25T05:57:01Z"
-  },
-  {
-    "company": "Koepp, Kertzmann and Maggio",
-    "position": "Marketing Assistant",
-    "jobLocation": "Pashkovskiy",
-    "jobType": "part-time",
-    "status": "declined",
-    "createdAt": "2021-07-02T11:21:14Z"
-  },
-  {
-    "company": "DuBuque Group",
-    "position": "Research Assistant IV",
-    "jobLocation": "Vanimo",
-    "jobType": "remote",
-    "status": "interview",
-    "createdAt": "2021-03-31T10:06:43Z"
-  },
-  {
-    "company": "McCullough Inc",
-    "position": "Senior Cost Accountant",
-    "jobLocation": "Xingfu",
-    "jobType": "part-time",
-    "status": "interview",
-    "createdAt": "2021-04-09T16:55:23Z"
-  },
-  {
-    "company": "Skiles-Cormier",
-    "position": "Quality Control Specialist",
-    "jobLocation": "Salcedo",
-    "jobType": "part-time",
-    "status": "interview",
-    "createdAt": "2021-08-17T07:34:50Z"
-  },
-  {
-    "company": "Jenkins LLC",
-    "position": "Speech Pathologist",
-    "jobLocation": "Dukuhbadag",
-    "jobType": "internship",
-    "status": "pending",
-    "createdAt": "2021-01-06T21:42:29Z"
-  },
-  {
-    "company": "Cassin-Nienow",
-    "position": "Director of Sales",
-    "jobLocation": "Daulatpur",
-    "jobType": "internship",
-    "status": "declined",
-    "createdAt": "2021-11-15T13:17:26Z"
-  },
-  {
-    "company": "Murazik-Wiegand",
-    "position": "Sales Representative",
-    "jobLocation": "Sena",
-    "jobType": "full-time",
-    "status": "pending",
-    "createdAt": "2021-10-18T13:52:16Z"
-  },
-  {
-    "company": "Wunsch-Grimes",
-    "position": "Professor",
-    "jobLocation": "Sveg",
-    "jobType": "full-time",
-    "status": "interview",
-    "createdAt": "2020-12-15T17:16:08Z"
+    "createdAt": "2021-02-23T22:09:04Z",
+    "stared": "false",
+    "notes": "",
+    "createdBy": "61f297678ef01206cb9079f1"
   }
 ]
