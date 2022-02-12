@@ -1,20 +1,30 @@
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import { Navbar, BigSidebar, SmallSidebar } from "../../Components";
+import { useAppContext } from "../../context/appContext";
 const SharedLayout = () => {
+  const { user } = useAppContext();
   return (
-    <Wrapper>
-      <main className="dashboard">
-        <SmallSidebar />
-        <BigSidebar />
-        <div>
-          <Navbar />
-          <div className="dashboard-page">
-            <Outlet />
+    <div
+      style={{
+        backgroundColor: user?.theme === "light" ? "#f5f5f5" : "#1e1e1e",
+      }}
+      data-theme={user.theme}
+    >
+      {" "}
+      <Wrapper>
+        <main className="dashboard" data-theme={user.theme}>
+          <SmallSidebar />
+          <BigSidebar />
+          <div>
+            <Navbar />
+            <div className="dashboard-page" data-theme={user.theme}>
+              <Outlet />
+            </div>
           </div>
-        </div>
-      </main>
-    </Wrapper>
+        </main>
+      </Wrapper>
+    </div>
   );
 };
 
@@ -22,6 +32,7 @@ const Wrapper = styled.section`
   .dashboard {
     display: grid;
     grid-template-columns: 1fr;
+    background-color: "black";
   }
   .dashboard-page {
     width: 90vw;

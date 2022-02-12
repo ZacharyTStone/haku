@@ -62,6 +62,7 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     row-gap: 2rem;
+    color: var(--textColor);
   }
   @media (min-width: 992px) {
     .jobs {
