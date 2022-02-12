@@ -67,4 +67,10 @@ const updateUser = async (req, res) => {
   res.status(StatusCodes.OK).json({ user, token, location: user.location });
 };
 
-export { register, login, updateUser };
+const deleteUser = async (req, res) => {
+  const user = await User.findOne({ _id: req.user.userId });
+  await user.remove();
+  res.status(StatusCodes.OK).json({ message: "User deleted" });
+};
+
+export { register, login, updateUser, deleteUser };

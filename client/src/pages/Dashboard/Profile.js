@@ -5,8 +5,15 @@ import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
 
 const Profile = () => {
-  const { user, showAlert, displayAlert, updateUser, isLoading } =
-    useAppContext();
+  const {
+    user,
+    showAlert,
+    displayAlert,
+    updateUser,
+    isLoading,
+    deleteUser,
+    logoutUser,
+  } = useAppContext();
 
   const [name, setName] = useState(user?.name);
   const [email, setEmail] = useState(user?.email);
@@ -21,6 +28,14 @@ const Profile = () => {
       return;
     }
     updateUser({ name, email, lastName, location, theme });
+  };
+
+  const handleDelete = () => {
+    if (!window.confirm("Are you sure you want to delete your account?")) {
+      return;
+    }
+    deleteUser();
+    logoutUser();
   };
 
   return (
@@ -71,6 +86,10 @@ const Profile = () => {
           </button>
         </div>
       </form>
+      <button className="btn btn-danger" onClick={() => handleDelete()}>
+        {" "}
+        Delete Account{" "}
+      </button>
     </Wrapper>
   );
 };
@@ -83,6 +102,12 @@ const Wrapper = styled.section`
   box-shadow: var(--shadow-2);
   h3 {
     margin-top: 0;
+  }
+  .btn-danger {
+    position: relative;
+    :hover {
+      color: white;
+    }
   }
   .form {
     margin: 0;

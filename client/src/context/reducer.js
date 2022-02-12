@@ -9,6 +9,9 @@ import {
   UPDATE_USER_BEGIN,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_ERROR,
+  DELETE_USER_BEGIN,
+  DELETE_USER_SUCCESS,
+  DELETE_USER_ERROR,
   HANDLE_CHANGE,
   CLEAR_VALUES,
   CREATE_JOB_BEGIN,
@@ -114,6 +117,28 @@ const reducer = (state, action) => {
       alertText: action.payload.msg,
     };
   }
+  if (action.type === DELETE_USER_BEGIN) {
+    return { ...state, isLoading: true };
+  }
+  if (action.type === DELETE_USER_SUCCESS) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "success",
+      alertText: "User Profile Deleted! Redirecting to Login Page...",
+    };
+  }
+  if (action.type === DELETE_USER_ERROR) {
+    return {
+      ...state,
+      isLoading: false,
+      showAlert: true,
+      alertType: "danger",
+      alertText: action.payload.msg,
+    };
+  }
+
   if (action.type === HANDLE_CHANGE) {
     return {
       ...state,
