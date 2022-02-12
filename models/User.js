@@ -41,6 +41,11 @@ const UserSchema = new mongoose.Schema({
     maxlength: 20,
     default: "my city",
   },
+  theme: {
+    type: String,
+    enum: ["light", "dark"],
+    default: "light",
+  },
 });
 
 UserSchema.pre("save", async function () {

@@ -26,6 +26,7 @@ const Wrapper = styled.div`
   .text {
     text-transform: capitalize;
     letter-spacing: var(--letterSpacing);
+    color: var(--textColor);
   }
 `;
 

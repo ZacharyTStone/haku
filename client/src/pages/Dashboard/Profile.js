@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FormRow } from "../../Components";
+import { FormRow, FormRowSelect } from "../../Components";
 import { Alert } from "../../Components";
 import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
@@ -12,6 +12,7 @@ const Profile = () => {
   const [email, setEmail] = useState(user?.email);
   const [lastName, setLastName] = useState(user?.lastName);
   const [location, setLocation] = useState(user?.location);
+  const [theme, setTheme] = useState(user?.theme);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -19,7 +20,7 @@ const Profile = () => {
       displayAlert();
       return;
     }
-    updateUser({ name, email, lastName, location });
+    updateUser({ name, email, lastName, location, theme });
   };
 
   return (
@@ -53,7 +54,19 @@ const Profile = () => {
             value={location}
             handleChange={(e) => setLocation(e.target.value)}
           />
-          <button className="btn btn-block" type="submit" disabled={isLoading}>
+          <FormRowSelect
+            name="theme"
+            type="select"
+            value={theme}
+            handleChange={(e) => setTheme(e.target.value)}
+            list={["light", "dark"]}
+          />
+
+          <button
+            className="btn btn-block btn-submit"
+            type="submit"
+            disabled={isLoading}
+          >
             {isLoading ? "Please Wait..." : "save changes"}
           </button>
         </div>

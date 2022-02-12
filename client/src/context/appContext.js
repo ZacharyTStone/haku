@@ -41,6 +41,7 @@ const initialState = {
   alertText: "",
   alertType: "",
   user: user ? JSON.parse(user) : null,
+  theme: user ? user.theme : "light",
   token: token,
   userLocation: userLocation || "",
   showSidebar: false,

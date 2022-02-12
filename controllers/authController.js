@@ -23,6 +23,7 @@ const register = async (req, res) => {
       lastName: user.lastName,
       location: user.location,
       name: user.name,
+      theme: user.theme,
     },
     token,
     location: user.location,
@@ -47,7 +48,7 @@ const login = async (req, res) => {
   res.status(StatusCodes.OK).json({ user, token, location: user.location });
 };
 const updateUser = async (req, res) => {
-  const { email, name, lastName, location } = req.body;
+  const { email, name, lastName, location, theme } = req.body;
   if (!email || !name || !lastName || !location) {
     throw new BadRequestError("Please provide all values");
   }
@@ -57,6 +58,7 @@ const updateUser = async (req, res) => {
   user.name = name;
   user.lastName = lastName;
   user.location = location;
+  user.theme = theme;
 
   await user.save();
 

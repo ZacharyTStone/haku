@@ -100,7 +100,7 @@ const AddJob = () => {
           <div className="btn-container">
             <button
               type="submit"
-              className="btn btn-block submit-btn"
+              className="btn btn-block btn-submit"
               onClick={handleSubmit}
               disabled={isLoading}
             >

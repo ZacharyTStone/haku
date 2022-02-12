@@ -7,7 +7,7 @@ import { FormRowSelect } from "../../Components";
 import Calculator from "../../Components/Calculator";
 
 const Tools = () => {
-  const { isLoading, jobs, getJobs } = useAppContext();
+  const { isLoading, jobs, getJobs, user } = useAppContext();
   const [salary, setSalary] = useState("");
   const [error, setError] = useState(false);
   const [baseCurrency, setBaseCurrency] = useState("USD");
@@ -17,6 +17,7 @@ const Tools = () => {
 
   useEffect(() => {
     getJobs();
+    console.log(jobs);
     fetch(
       "https://openexchangerates.org/api/latest.json?app_id=" +
         process.env.REACT_APP_RATE_API
