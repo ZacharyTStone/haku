@@ -1,4 +1,5 @@
 import User from "../models/User.js";
+import Job from "../models/Job.js";
 import { StatusCodes } from "http-status-codes";
 import { BadRequestError, UnAuthenticatedError } from "../errors/index.js";
 
@@ -69,8 +70,16 @@ const updateUser = async (req, res) => {
 
 const deleteUser = async (req, res) => {
   const user = await User.findOne({ _id: req.user.userId });
+  console.log(user);
   await user.remove();
   res.status(StatusCodes.OK).json({ message: "User deleted" });
+  // delete all jobs
+
+  const jobs = await Job.find({ createdBy: req.user.userId });
+  console.log(jobs);
+  await jobs.forEach((job) => {
+    job.remove();
+  });
 };
 
 export { register, login, updateUser, deleteUser };
