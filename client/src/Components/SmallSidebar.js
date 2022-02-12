@@ -34,7 +34,7 @@ const Wrapper = styled.aside`
   .sidebar-container {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background-color: var(--white);
     display: flex;
     justify-content: center;
     align-items: center;

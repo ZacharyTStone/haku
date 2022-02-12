@@ -5,9 +5,19 @@ import Logo from "./Logo";
 import React, { useState } from "react";
 
 const Navbar = () => {
-  const { toggleSidebar, logoutUser, user } = useAppContext();
+  const { toggleSidebar, logoutUser, user, deleteUser } = useAppContext();
 
   const [showLogout, setShowLogout] = useState(false);
+
+  const handleLogout = () => {
+    if (user.emailProvider === "demo.com") {
+      console.log(user.emailProvider);
+      deleteUser();
+      logoutUser();
+    } else {
+      logoutUser();
+    }
+  };
 
   return (
     <Wrapper>
@@ -40,7 +50,12 @@ const Navbar = () => {
             <FaCaretDown />
           </button>
           <div className={showLogout ? "dropdown show-dropdown" : "dropdown"}>
-            <button onClick={logoutUser} className="dropdown-btn">
+            <button
+              onClick={() => {
+                handleLogout();
+              }}
+              className="dropdown-btn"
+            >
               logout
             </button>
           </div>

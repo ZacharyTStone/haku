@@ -13,6 +13,9 @@ import {
   UPDATE_USER_BEGIN,
   UPDATE_USER_SUCCESS,
   UPDATE_USER_ERROR,
+  DELETE_USER_BEGIN,
+  DELETE_USER_SUCCESS,
+  DELETE_USER_ERROR,
   HANDLE_CHANGE,
   CLEAR_VALUES,
   CREATE_JOB_BEGIN,
@@ -183,6 +186,29 @@ const AppProvider = ({ children }) => {
     clearAlert();
   };
 
+  const deleteUser = async (currentUser) => {
+    dispatch({ type: DELETE_USER_BEGIN });
+    try {
+      const { data } = await authFetch.delete("/auth/deleteUser", currentUser);
+
+      const { user, location, token } = data;
+
+      dispatch({
+        type: DELETE_USER_SUCCESS,
+        payload: { user, location, token },
+      });
+    } catch (error) {
+      if (error.response.status !== 401) {
+        dispatch({
+          type: DELETE_USER_ERROR,
+          payload: { msg: error.response.data.msg },
+        });
+      }
+    }
+    clearAlert();
+    removeUserFromLocalStorage();
+  };
+
   const handleChange = ({ name, value }) => {
     dispatch({ type: HANDLE_CHANGE, payload: { name, value } });
   };
@@ -312,6 +338,7 @@ const AppProvider = ({ children }) => {
         toggleSidebar,
         logoutUser,
         updateUser,
+        deleteUser,
         handleChange,
         clearValues,
         createJob,
