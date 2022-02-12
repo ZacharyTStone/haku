@@ -163,6 +163,13 @@ const Landing = () => {
                 <li>
                   {" "}
                   <FaCheck />
+                  Unlike other job trackers, Haku does not use cookies to track
+                  you for advertising purposes and does not request personal
+                  data from any third parties.
+                </li>
+                <li>
+                  {" "}
+                  <FaCheck />
                   We're always working on adding new features and improvements.
                 </li>
               </ul>
