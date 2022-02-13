@@ -48,7 +48,7 @@ app.use(express.json());
 app.use(helmet());
 //sanitize input
 app.use(xss());
-// prevents mongodb operator injection
+// prevents mongodb operator injection from mongoDB queries
 app.use(mongoSanitize());
 
 app.use("/api/v1/auth", authRouter);
