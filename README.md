@@ -41,7 +41,7 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 - [Stared](#stared)
 - [Tools Page](#tools-page)
 - [Donations](#donations)
-- [Other] (#other)
+- [Other](#other)
 
 ## Links
 
