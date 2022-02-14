@@ -41,6 +41,7 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 - [Stared](#stared)
 - [Tools Page](#tools-page)
 - [Donations](#donations)
+- [Other] (#other)
 
 ## Links
 
@@ -101,12 +102,10 @@ in auth controller
 ```
 const deleteUser = async (req, res) => {
  const user = await User.findOne({ _id: req.user.userId });
- console.log(user);
  await user.remove();
  res.status(StatusCodes.OK).json({ message: "User deleted" });
 
  const jobs = await Job.find({ createdBy: req.user.userId });
- console.log(jobs);
  await jobs.forEach((job) => {
  job.remove();
  });
@@ -231,6 +230,26 @@ I used Coinbase commerce for the crypto donation and a buy me a coffee button fo
 I don't expect any donations, but if you can, I would love to use it to help pay for the server costs, etc...
 
 <img src = "https://media.giphy.com/media/uQryhlp6aUUZszRdJG/giphy.gif" width ="80%>
+                                                                                
+## Other
+                                                                                
+I also added many other smaller features.
+                                                                                
+For example I added a rate limiter on the top level get request to prevent DDOS attacks
+                                                                                
+```
+
+// rate limiter
+// maximum of five requests per minute
+
+const getLimiter = rateLimiter({
+  windowMs: 1 * 60 * 1000, // 1 minute
+  max: 50,
+});
+
+```
+                                                                                
+                                                                                
 
 Thank you for reading this far! You are awesome!
 
