@@ -18,7 +18,7 @@ Haku is a robust and free-to-use Job tracker. Users can create, update, and dele
 
 Before this project, I was not familiar with best practices for Authentication.
 
-I wanted to have this app be a safe and secure experience for users so I completed the MERN Stack Course 2022 on Udemy.
+I don't normally do tutorials, Howver, I wanted to have this app be a secure experience for users, so I completed the MERN Stack Course 2022 on Udemy.
 
 After completion, I used that project as a blueprint to create this app adding many features, pages, designs, and refactoring the code.
 
