@@ -18,7 +18,7 @@ Haku is a robust and free-to-use Job tracker. Users can create, update, and dele
 
 Before this project, I was not familiar with best practices for Authentication.
 
-I don't normally do tutorials, Howver, I wanted to have this app be a secure experience for users, so I completed the MERN Stack Course 2022 on Udemy.
+I don't normally do tutorials, However, I wanted to have this app be a secure experience for users, so I completed the MERN Stack Course 2022 on Udemy.
 
 After completion, I used that project as a blueprint to create this app adding many features, pages, designs, and refactoring the code.
 
@@ -243,14 +243,15 @@ For example I added a rate limiter on the top level get request to prevent DDOS 
 // maximum of five requests per minute
 
 const getLimiter = rateLimiter({
-  windowMs: 1 * 60 * 1000, // 1 minute
-  max: 50,
+windowMs: 1 _ 60 _ 1000, // 1 minute
+max: 50,
 });
 
 ```
-                                                                                
-                                                                                
+
+
 
 Thank you for reading this far! You are awesome!
 
 You can find the source code for the app on my GitHub page.
+```

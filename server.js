@@ -33,7 +33,7 @@ if (process.env.NODE_ENV !== "production") {
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 // rate limiter
-// ßmaximum of five requests per minute
+// maximum of five requests per minute
 
 const getLimiter = rateLimiter({
   windowMs: 1 * 60 * 1000, // 1 minute
