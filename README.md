@@ -4,7 +4,6 @@
  <img src="https://img.shields.io/github/languages/top/zachinjapan/haku?style=plastic&labelColor=yellow" alt="Top Language" />
  <img src="https://img.shields.io/github/languages/code-size/zachinjapan/haku?style=plastic" alt="Code Size" />
  <img src="https://img.shields.io/github/repo-size/zachinjapan/haku?style=plastic" alt="Repo Size" /> 
- <img src="https://img.shields.io/tokei/lines/github/zachinjapan/haku?style=plastic" alt="Total Lines" />
  <img src="https://img.shields.io/github/last-commit/zachinjapan/haku?style=plastic" alt="Last Commit" /> 
  <img src="https://img.shields.io/github/issues/zachinjapan/haku?style=plastic" alt="Issues" /> 
  <img src="https://img.shields.io/github/followers/zachinjapan?style=social" alt="Followers" /> 
