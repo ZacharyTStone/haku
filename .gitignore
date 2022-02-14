@@ -9,7 +9,5 @@ client/node_modules
 .env.test
 .env.production
 client/DS_Store
-README2.md
-README2
 /client/.env
 populate.js
