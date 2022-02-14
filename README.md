@@ -227,13 +227,13 @@ I wanted to allow the user to donate to the app.
 
 I used Coinbase commerce for the crypto donation and a buy me a coffee button for the regular cash donation
 
-I don't expect any donations, but if you can, I would love to use it to help pay for the server costs, etc...
+I don't expect any donations, but if you can, I would love to use it to help pay for the server costs, etc.
 
-<img src = "https://media.giphy.com/media/uQryhlp6aUUZszRdJG/giphy.gif" width ="80%>
+<img src = "https://media.giphy.com/media/uQryhlp6aUUZszRdJG/giphy.gif" width = "80%">
                                                                                 
 ## Other
                                                                                 
-I also added many other smaller features.
+I also added many smaller features.
                                                                                 
 For example I added a rate limiter on the top level get request to prevent DDOS attacks
                                                                                 
