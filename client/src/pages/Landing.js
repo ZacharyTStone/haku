@@ -79,8 +79,8 @@ const Landing = () => {
                 Haku <span> job tracker</span>
               </h1>
               <p>
-                Haku pronounced "ha koo" is an application that let's you track,
-                and compare jobs during the the interview process.
+                Haku pronounced "hah-koo" is an application that helps you
+                track, and compare jobs during the the interview process.
               </p>
               <div className="login-div">
                 <Link to="/register" className="btn btn-hero">
