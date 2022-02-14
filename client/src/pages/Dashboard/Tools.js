@@ -166,6 +166,7 @@ const Wrapper = styled.div`
     align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
+    height: "100vh";
     h3 {
       font-size: 1.5rem;
       font-weight: 500;
