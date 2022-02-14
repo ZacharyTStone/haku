@@ -33,6 +33,7 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     background-color: "black";
+    overflow: auto;
   }
   .dashboard-page {
     width: 90vw;
