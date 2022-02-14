@@ -4,7 +4,6 @@
  <img src="https://img.shields.io/github/languages/top/zachinjapan/haku?style=plastic&labelColor=yellow" alt="Top Language" />
  <img src="https://img.shields.io/github/languages/code-size/zachinjapan/haku?style=plastic" alt="Code Size" />
  <img src="https://img.shields.io/github/repo-size/zachinjapan/haku?style=plastic" alt="Repo Size" /> 
- <img src="https://img.shields.io/tokei/lines/github/zachinjapan/haku?style=plastic" alt="Total Lines" />
  <img src="https://img.shields.io/github/last-commit/zachinjapan/haku?style=plastic" alt="Last Commit" /> 
  <img src="https://img.shields.io/github/issues/zachinjapan/haku?style=plastic" alt="Issues" /> 
  <img src="https://img.shields.io/github/followers/zachinjapan?style=social" alt="Followers" /> 
@@ -18,7 +17,7 @@ Haku is a robust and free-to-use Job tracker. Users can create, update, and dele
 
 Before this project, I was not familiar with best practices for Authentication.
 
-I don't normally do tutorials, However, I wanted to have this app be a secure experience for users, so I completed the MERN Stack Course 2022 on Udemy.
+I don't normally do tutorials, However, in order for this app be a secure experience for users, I completed the MERN Stack Course 2022 on Udemy.
 
 After completion, I used that project as a blueprint to create this app adding many features, pages, designs, and refactoring the code.
 
@@ -45,7 +44,7 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 
 ## Links
 
-- GH-Pages demo site link: (https://www.hakujobs.com)
+- Live Site: (https://www.hakujobs.com)
 - Github Repository URL: (https://github.com/zachinjapan/haku)
 
 ## License
