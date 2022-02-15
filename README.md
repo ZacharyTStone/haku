@@ -239,7 +239,6 @@ For example I added a rate limiter on the top level get request to prevent DDOS 
 ```
 
 // rate limiter
-// maximum of five requests per minute
 
 const getLimiter = rateLimiter({
 windowMs: 1 _ 60 _ 1000, // 1 minute
