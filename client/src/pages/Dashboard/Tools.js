@@ -127,7 +127,7 @@ const Tools = () => {
           </ul>
         </div>
         <div className="form all-jobs">
-          <h3>All Jobs</h3>
+          <h3>Recent Jobs</h3>
           <ol>
             {jobs.map((job) => {
               console.log(job);
