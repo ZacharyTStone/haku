@@ -1,10 +1,31 @@
 import { useAppContext } from "../context/appContext";
 import StatItem from "./StatItem";
-import { FaSuitcaseRolling, FaCalendarCheck, FaBug } from "react-icons/fa";
+import {
+  FaSuitcaseRolling,
+  FaCalendarCheck,
+  FaBug,
+  FaList,
+} from "react-icons/fa";
+import { BsFillCalendar2WeekFill } from "react-icons/bs";
+import { AiOutlineStar } from "react-icons/ai";
 import styled from "styled-components";
 
 const StatsContainer = () => {
-  const { stats } = useAppContext();
+  const monthNames = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+  const { stats, monthlyApplications, staredJobs } = useAppContext();
 
   const defaultStats = [
     {
@@ -28,6 +49,27 @@ const StatsContainer = () => {
       icon: <FaBug />,
       color: "#bd4e4e",
       bcg: "#d8b2b2",
+    },
+    {
+      title: "Jobs added during " + monthNames[new Date().getMonth()],
+      count: monthlyApplications.length || 0,
+      icon: <BsFillCalendar2WeekFill />,
+      color: "var(--primary-700)",
+      bcg: "var(--white)",
+    },
+    {
+      title: "Stared Jobs",
+      count: staredJobs.length || 0,
+      icon: <AiOutlineStar />,
+      color: "var(--primary-700)",
+      bcg: "var(--white)",
+    },
+    {
+      title: "Total Jobs",
+      count: stats.pending + stats.interview + stats.declined || 0,
+      icon: <FaList />,
+      color: "var(--primary-700)",
+      bcg: "var(--white)",
     },
   ];
 

@@ -129,6 +129,13 @@ const showStats = async (req, res) => {
     declined: stats.declined || 0,
   };
 
+  // find all stared jobs
+
+  let staredJobs = await Job.find({
+    createdBy: req.user.userId,
+    stared: true,
+  });
+
   let monthlyApplications = await Job.aggregate([
     { $match: { createdBy: mongoose.Types.ObjectId(req.user.userId) } },
     {
@@ -154,7 +161,9 @@ const showStats = async (req, res) => {
     })
     .reverse();
 
-  res.status(StatusCodes.OK).json({ defaultStats, monthlyApplications });
+  res
+    .status(StatusCodes.OK)
+    .json({ defaultStats, monthlyApplications, staredJobs });
 };
 
 export { createJob, deleteJob, getAllJobs, updateJob, showStats };

@@ -263,6 +263,7 @@ const reducer = (state, action) => {
       isLoading: false,
       stats: action.payload.stats,
       monthlyApplications: action.payload.monthlyApplications,
+      staredJobs: action.payload.staredJobs,
     };
   }
   if (action.type === CLEAR_FILTERS) {
