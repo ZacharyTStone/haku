@@ -23,8 +23,6 @@ After completion, I used that project as a blueprint to create this app adding m
 
 I hope you enjoy this project and if you have any questions or comments feel free to contact me.
 
-here is the original project if you would like to compare. https://www.jobify.live/landing
-
 </br>
 
 ## Table of Contents
