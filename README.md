@@ -23,8 +23,6 @@ After completion, I used that project as a blueprint to create this app adding m
 
 I hope you enjoy this project and if you have any questions or comments feel free to contact me.
 
-here is the original project if you would like to compare. https://www.jobify.live/landing
-
 </br>
 
 ## Table of Contents
@@ -41,6 +39,7 @@ here is the original project if you would like to compare. https://www.jobify.li
 - [Notes](#notes)
 - [Stared](#stared)
 - [Tools Page](#tools-page)
+- [Stats](#stats)
 - [Donations](#donations)
 - [Other](#other)
 
@@ -221,6 +220,15 @@ I made a custom currency component that allows the user to enter a currency and 
 I also added a calculator, helpful links, and a list of all jobs.
 
 <img src = "https://media.giphy.com/media/EU55vEVuq5KA34F6n7/giphy.gif" width = "80%">
+
+## Stats
+
+I added 3 more stats.
+-Jobs added during the current month
+-Stared Jobs
+-Total number of Jobs
+
+<img src = "https://media.giphy.com/media/g5q2BAEimCplq3tjEG/giphy.gif" width = "80%">
 
 ## Donations
 
