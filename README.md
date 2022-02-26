@@ -15,11 +15,11 @@
 
 Haku is a robust and free-to-use Job tracker. Users can create, update, and delete jobs.
 
-Before this project, I was not familiar with best practices for Authentication.
+Before this project, I was not familiar with best practices for Authentication and database management.
 
 I don't normally do tutorials, However, in order for this app be a secure experience for users, I completed the MERN Stack Course 2022 on Udemy.
 
-After completion, I used that project as a blueprint to create this app adding many features, pages, designs, and refactoring the code.
+After completion, I used that project as a blueprint to create this app adding many features, creating new pages, updating designs, and refactoring the code.
 
 I hope you enjoy this project and if you have any questions or comments feel free to contact me.
 
@@ -31,6 +31,7 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 - [License](#license)
 - [Contributions](#contributions)
 - [Questions](#questions)
+- [Reception](#reception)
 - (start of my own custom features)
 - [Landing Page](#landing-page)
 - [Demo Login](#demo-login)
@@ -64,6 +65,14 @@ Fork, request, or contact me.
 このプロジェクトに関するご質問は、Zach.Stone.Developer@gmail.com までお気軽にご連絡ください。
 
 Feel free to reach me at Zach.Stone.Developer@gmail.com with any questions regarding this project!
+
+## Reception 
+
+Here is what the creater of that course said about my app.
+
+
+<img src = "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/274726508_128642766351685_4080010803863368174_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=730e14&_nc_ohc=tSZdmeOlvLoAX_8wK1i&_nc_ht=scontent-lga3-1.xx&oh=00_AT_VeuTk8CbR3gkr76bJYDcmPZeY6_2cGeDcsLOsW2DGvw&oe=621F3CBE" width = "80%" >
+
 
 ## Landing Page
 
@@ -262,4 +271,3 @@ max: 50,
 Thank you for reading this far! You are awesome!
 
 You can find the source code for the app on my GitHub page.
-```
