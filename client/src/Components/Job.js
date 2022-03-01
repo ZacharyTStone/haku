@@ -18,6 +18,7 @@ const Job = ({
   stared,
 }) => {
   const { setEditJob, deleteJob } = useAppContext();
+  console.log(status);
 
   let date = moment(createdAt);
   date = date.format("MMM Do, YYYY");
@@ -145,6 +146,11 @@ const Wrapper = styled.article`
     }
   }
   .pending {
+    background: var(--yellow-light);
+    color: var(--yellow);
+  }
+
+  .followed {
     background: var(--yellow-light);
     color: var(--yellow);
   }
