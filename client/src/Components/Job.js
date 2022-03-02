@@ -147,12 +147,12 @@ const Wrapper = styled.article`
   }
   .pending {
     background: var(--yellow-light);
-    color: var(--yellow);
+    color: var(--text-color);
   }
 
   .followed {
     background: var(--yellow-light);
-    color: var(--yellow);
+    color: var(--text-color);
   }
   .interview {
     background: #e0e8f9;
@@ -187,6 +187,7 @@ const Wrapper = styled.article`
     text-align: center;
     width: 100px;
     height: 30px;
+    padding: 0.2rem;
   }
   footer {
     margin-top: 1rem;
