@@ -97,8 +97,7 @@ const Wrapper = styled.article`
     display: flex;
     height: auto;
     flex-wrap: wrap;
-    height: 8rem;
-    overflow: scroll;
+    scroll-behavior: auto;
   }
 
   p {
@@ -187,7 +186,7 @@ const Wrapper = styled.article`
     text-align: center;
     width: 100px;
     height: 30px;
-    padding: 0.2rem;
+    /* padding: 0.2rem; */
   }
   footer {
     margin-top: 1rem;
