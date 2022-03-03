@@ -33,14 +33,14 @@ const Wrapper = styled.section`
     display: grid;
     grid-template-columns: 1fr;
     background-color: "black";
-    overflow: auto;
   }
   .dashboard-page {
     width: 90vw;
     height: 88vh;
     margin: 0 auto;
     padding: 2rem 0;
-    overflow: auto;
+    overflow: scroll;
+    scroll-behavior: smooth;
   }
   @media (min-width: 992px) {
     .dashboard {

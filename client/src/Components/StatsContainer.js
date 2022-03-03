@@ -66,7 +66,9 @@ const StatsContainer = () => {
     },
     {
       title: "Total Jobs",
-      count: stats.pending + stats.interview + stats.declined || 0,
+      count:
+        stats.pending + stats.interview + stats.declined + stats.followedUp ||
+        0,
       icon: <FaList />,
       color: "var(--primary-700)",
       bcg: "var(--white)",
