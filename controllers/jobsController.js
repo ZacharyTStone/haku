@@ -117,7 +117,7 @@ const showStats = async (req, res) => {
     { $match: { createdBy: mongoose.Types.ObjectId(req.user.userId) } },
     { $group: { _id: "$status", count: { $sum: 1 } } },
   ]);
-  console.log(stats);
+
   stats = stats.reduce((acc, curr) => {
     const { _id: title, count } = curr;
     acc[title] = count;
@@ -131,7 +131,6 @@ const showStats = async (req, res) => {
     followedUp: stats["followed up"] || 0,
   };
 
-  console.log(defaultStats);
 
   // find all stared jobs
 
