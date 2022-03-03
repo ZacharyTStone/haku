@@ -31,7 +31,6 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 - [License](#license)
 - [Contributions](#contributions)
 - [Questions](#questions)
-- [Reception](#reception)
 - (start of my own custom features)
 - [Landing Page](#landing-page)
 - [Demo Login](#demo-login)
@@ -65,14 +64,6 @@ Fork, request, or contact me.
 このプロジェクトに関するご質問は、Zach.Stone.Developer@gmail.com までお気軽にご連絡ください。
 
 Feel free to reach me at Zach.Stone.Developer@gmail.com with any questions regarding this project!
-
-## Reception 
-
-Here is what the creater of that course said about my app.
-
-
-<img src = "https://scontent-lga3-1.xx.fbcdn.net/v/t39.30808-6/274726508_128642766351685_4080010803863368174_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=730e14&_nc_ohc=tSZdmeOlvLoAX_8wK1i&_nc_ht=scontent-lga3-1.xx&oh=00_AT_VeuTk8CbR3gkr76bJYDcmPZeY6_2cGeDcsLOsW2DGvw&oe=621F3CBE" width = "80%" >
-
 
 ## Landing Page
 
