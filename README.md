@@ -244,7 +244,7 @@ I don't expect any donations, but if you can, I would love to use it to help pay
                                                                                 
 I also added many smaller features.
                                                                                 
-For example I added a rate limiter on the top level get request to prevent DDOS attacks
+For example I added a rate limiter to prevent DDOS attacks
                                                                                 
 ```
 
