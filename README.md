@@ -15,11 +15,8 @@
 
 Haku is a robust and free-to-use Job tracker. Users can create, update, and delete jobs.
 
-Before this project, I was not familiar with best practices for Authentication and database management.
 
-In order for this app be a secure experience for users, I completed the MERN Stack Course 2022 on Udemy.
-
-After completion, I used that project as a blueprint to create this app adding many features, creating new pages, updating designs, and refactoring the code.
+To learn Authentication and database management, I took a project I made through a paid course and added custom features. For example, I added a new landing page, demo login, delete user functionality, dark theme, custom job and user fields, and a tools page.
 
 I hope you enjoy this project and if you have any questions or comments feel free to contact me.
 
