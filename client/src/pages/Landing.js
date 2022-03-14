@@ -18,7 +18,7 @@ import { FaArrowCircleRight } from "react-icons/fa";
 import ImageGallery from "react-image-gallery";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useEffect } from "react";
+// import { useEffect } from "react";
 
 const images = [
   {
@@ -40,24 +40,24 @@ const images = [
 ];
 
 const Landing = () => {
-  useEffect(() => {
-    toast.success(
-      "Hi! 👋 This app is currently in development. Want me to add a feature? Let me know at Zach.Stone.Developer@gmail.com",
-      {
-        position: "top-right",
-        autoClose: 6000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   toast.success(
+  //     "Hi! 👋 This app is currently in development. Want me to add a feature? Let me know at Zach.Stone.Developer@gmail.com",
+  //     {
+  //       position: "top-right",
+  //       autoClose: 6000,
+  //       hideProgressBar: true,
+  //       closeOnClick: true,
+  //       pauseOnHover: true,
+  //       draggable: true,
+  //       progress: undefined,
+  //     }
+  //   );
+  // }, []);
 
   return (
     <>
-      <ToastContainer
+      {/* <ToastContainer
         position="top-right"
         autoClose={5000}
         hideProgressBar={false}
@@ -67,7 +67,7 @@ const Landing = () => {
         pauseOnFocusLoss
         draggable
         pauseOnHover
-      />
+      /> */}
       <Wrapper>
         <nav>
           <Logo />
