@@ -18,6 +18,8 @@ Haku is a robust and free-to-use Job tracker. Users can create, update, and dele
 
 To learn Authentication and database management, I took a project I made through a paid course and added custom features. For example, I added a new landing page, demo login, delete user functionality, dark theme, custom job and user fields, and a tools page.
 
+Here is the original course project https://www.jobify.live/landing
+
 I hope you enjoy this project and if you have any questions or comments feel free to contact me.
 
 </br>
