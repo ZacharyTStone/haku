@@ -123,6 +123,14 @@ const Tools = () => {
                 5 Questions to Ask Yourself Before a Job Interview
               </a>
             </li>
+            <li>
+              <a
+                href="https://zachinjapan.com/How%20I%20Respond%20to%20Application%20Rejections/"
+                target="_blank"
+              >
+                How I Respond to Application Rejections (My blog)
+              </a>
+            </li>
           </ul>
         </div>
         <div className="form all-jobs">
