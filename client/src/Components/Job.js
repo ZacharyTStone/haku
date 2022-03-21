@@ -95,9 +95,9 @@ const Wrapper = styled.article`
     border-top: 1px solid var(--light-gray);
     width: 100%;
     display: flex;
-    height: auto;
+    height: 150px;
     flex-wrap: wrap;
-    scroll-behavior: auto;
+    overflow: auto;
   }
 
   p {

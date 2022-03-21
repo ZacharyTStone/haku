@@ -3,7 +3,7 @@ import StatItem from "./StatItem";
 import {
   FaSuitcaseRolling,
   FaCalendarCheck,
-  FaBug,
+  FaMailBulk,
   FaList,
 } from "react-icons/fa";
 import { BsFillCalendar2WeekFill } from "react-icons/bs";
@@ -33,36 +33,36 @@ const StatsContainer = () => {
       count: stats.pending || 0,
       icon: <FaSuitcaseRolling />,
       // color: "#BDBA19",
-      color: "var(--yellow-dark)",
-      bcg: "var(--yellow-light)",
+      color: "var(--primary-300)",
+      bcg: "var(--primary-50)",
+    },
+    {
+      title: "followed up applications",
+      count: stats.followedUp || 0,
+      icon: <FaMailBulk />,
+      color: "var(--primary-300)",
+      bcg: "var(--primary-50)",
     },
     {
       title: "interviews scheduled",
       count: stats.interview || 0,
       icon: <FaCalendarCheck />,
-      color: "#2c85bc",
-      bcg: "#e0e8f9",
-    },
-    {
-      title: "jobs declined",
-      count: stats.declined || 0,
-      icon: <FaBug />,
-      color: "#bd4e4e",
-      bcg: "#d8b2b2",
+      color: "var(--primary-300)",
+      bcg: "var(--primary-50)",
     },
     {
       title: "Jobs added during " + monthNames[new Date().getMonth()],
       count: monthlyApplications.length || 0,
       icon: <BsFillCalendar2WeekFill />,
-      color: "var(--primary-700)",
-      bcg: "var(--white)",
+      color: "var(--primary-300)",
+      bcg: "var(--primary-50)",
     },
     {
       title: "Stared Jobs",
       count: staredJobs.length || 0,
       icon: <AiOutlineStar />,
-      color: "var(--primary-700)",
-      bcg: "var(--white)",
+      color: "var(--primary-300)",
+      bcg: "var(--primary-50)",
     },
     {
       title: "Total Jobs",
@@ -70,8 +70,8 @@ const StatsContainer = () => {
         stats.pending + stats.interview + stats.declined + stats.followedUp ||
         0,
       icon: <FaList />,
-      color: "var(--primary-700)",
-      bcg: "var(--white)",
+      color: "var(--primary-300)",
+      bcg: "var(--primary-50)",
     },
   ];
 

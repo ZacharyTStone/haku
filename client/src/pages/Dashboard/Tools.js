@@ -96,7 +96,6 @@ const Tools = () => {
                   currency: targetCurrency,
                 }
               )}
-              disabled={true}
               disabled={error}
             />
           </form>
