@@ -25,7 +25,7 @@ const getAllJobs = async (req, res) => {
   const queryObject = {
     createdBy: req.user.userId,
   };
-  // add stuff based on condition
+  // create a query object to use to request jobs
 
   if (status && status !== "all") {
     queryObject.status = status;
@@ -37,13 +37,13 @@ const getAllJobs = async (req, res) => {
     queryObject.stared = stared;
   }
   if (search) {
-    queryObject.position = { $regex: search, $options: "i" };
+    queryObject.company = { $regex: search, $options: "i" };
   }
   // NO AWAIT
 
   let result = Job.find(queryObject);
 
-  // chain sort conditions
+  // sort the queried jobs
 
   if (sort === "latest") {
     result = result.sort("-createdAt");
@@ -51,14 +51,25 @@ const getAllJobs = async (req, res) => {
   if (sort === "oldest") {
     result = result.sort("createdAt");
   }
-  if (sort === "a-z") {
+  if (sort === "a-z (job title)") {
     result = result.sort("position");
   }
-  if (sort === "z-a") {
+  if (sort === "z-a (job title)") {
     result = result.sort("-position");
   }
+  if (sort === "a-z (company)") {
+    result = result.sort("company");
+  }
+  if (sort === "z-a (company)") {
+    result = result.sort("-company");
+  }
 
-  //
+  if (sort === "a-z (location)") {
+    result = result.sort("jobLocation");
+  }
+  if (sort === "z-a (location)") {
+    result = result.sort("-jobLocation");
+  }
 
   // setup pagination
   const page = Number(req.query.page) || 1;
@@ -130,7 +141,6 @@ const showStats = async (req, res) => {
     declined: stats.declined || 0,
     followedUp: stats["followed up"] || 0,
   };
-
 
   // find all stared jobs
 
