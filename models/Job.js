@@ -43,6 +43,11 @@ const JobSchema = new mongoose.Schema(
       default: false,
       required: false,
     },
+    URL: {
+      type: String,
+      maxlength: 300,
+      required: false,
+    },
   },
   { timestamps: true }
 );

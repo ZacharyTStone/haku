@@ -1,10 +1,25 @@
 import styled from "styled-components";
 
-const JobInfo = ({ icon, text }) => {
+const JobInfo = ({ icon, text, type }) => {
   return (
     <Wrapper>
       <span className="icon">{icon}</span>
-      <span className="text">{text}</span>
+      {type === "url" ? (
+        <a
+          href={text}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            textDecoration: "underline",
+            color: "black",
+            overflow: "hidden",
+          }}
+        >
+          {text}
+        </a>
+      ) : (
+        <span className="text">{text} </span>
+      )}
     </Wrapper>
   );
 };

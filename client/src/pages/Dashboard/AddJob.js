@@ -26,6 +26,7 @@ const AddJob = () => {
     editJob,
     notes,
     stared,
+    URL,
   } = useAppContext();
 
   const handleSubmit = (e) => {
@@ -50,7 +51,26 @@ const AddJob = () => {
   return (
     <Wrapper>
       <form className="form">
-        <h3>{isEditing ? "edit job" : "add job"}</h3>
+        <h3>
+          {isEditing ? "edit job" : "add job"}{" "}
+          <spand className="star">
+            <FaStar
+              color={stared === "false" ? "gray" : "gold"}
+              value={stared}
+              size={30}
+              style={{
+                marginTop: "20px",
+              }}
+              name="stared"
+              onClick={() => {
+                handleChange({
+                  name: "stared",
+                  value: stared === "true" ? "false" : "true",
+                });
+              }}
+            />
+          </spand>{" "}
+        </h3>
         {showAlert && <Alert />}
         <div className="form-center">
           {/* position */}
@@ -91,6 +111,13 @@ const AddJob = () => {
             list={jobTypeOptions}
           />
           <FormRowArea
+            name="URL"
+            labelText="URL"
+            value={URL}
+            handleChange={handleJobInput}
+            height="35px"
+          />
+          <FormRowArea
             name="notes"
             labelText="notes"
             value={notes}
@@ -115,23 +142,6 @@ const AddJob = () => {
             >
               clear
             </button>
-          </div>
-          <div className="star">
-            <FaStar
-              color={stared === "false" ? "gray" : "gold"}
-              value={stared}
-              size={30}
-              style={{
-                marginTop: "20px",
-              }}
-              name="stared"
-              onClick={() => {
-                handleChange({
-                  name: "stared",
-                  value: stared === "true" ? "false" : "true",
-                });
-              }}
-            />
           </div>
         </div>
       </form>

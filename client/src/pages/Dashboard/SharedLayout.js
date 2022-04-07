@@ -36,7 +36,8 @@ const Wrapper = styled.section`
   }
   .dashboard-page {
     width: 90vw;
-    height: 88vh;
+    min-height: 88vh;
+    height: max-content;
     margin: 0 auto;
     padding: 2rem 0;
     /* overflow: scroll;

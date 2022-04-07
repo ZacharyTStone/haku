@@ -82,6 +82,7 @@ const initialState = {
   notes: "",
   stared: "false",
   staredOptions: ["true", "false"],
+  URL: "",
 };
 
 const AppContext = React.createContext();
@@ -229,8 +230,16 @@ const AppProvider = ({ children }) => {
   const createJob = async () => {
     dispatch({ type: CREATE_JOB_BEGIN });
     try {
-      const { position, company, jobLocation, jobType, status, notes, stared } =
-        state;
+      const {
+        position,
+        company,
+        jobLocation,
+        jobType,
+        status,
+        notes,
+        stared,
+        URL,
+      } = state;
 
       await authFetch.post("/jobs", {
         position,
@@ -240,6 +249,7 @@ const AppProvider = ({ children }) => {
         status,
         notes,
         stared,
+        URL,
       });
       dispatch({ type: CREATE_JOB_SUCCESS });
       dispatch({ type: CLEAR_VALUES });

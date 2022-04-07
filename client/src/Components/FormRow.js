@@ -1,4 +1,4 @@
-const FormRow = ({ type, name, value, handleChange, labelText }) => {
+const FormRow = ({ type, name, value, handleChange, labelText, height }) => {
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
@@ -10,6 +10,9 @@ const FormRow = ({ type, name, value, handleChange, labelText }) => {
         name={name}
         onChange={handleChange}
         className="form-input"
+        style={{
+          height: height || "40px",
+        }}
       />
     </div>
   );
