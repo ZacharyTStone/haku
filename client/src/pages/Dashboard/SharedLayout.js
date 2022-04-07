@@ -39,8 +39,8 @@ const Wrapper = styled.section`
     height: 88vh;
     margin: 0 auto;
     padding: 2rem 0;
-    overflow: scroll;
-    scroll-behavior: smooth;
+    /* overflow: scroll;
+    scroll-behavior: smooth; */
   }
   @media (min-width: 992px) {
     .dashboard {
