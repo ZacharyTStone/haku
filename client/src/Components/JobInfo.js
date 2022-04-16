@@ -11,7 +11,7 @@ const JobInfo = ({ icon, text, type }) => {
           rel="noopener noreferrer"
           style={{
             textDecoration: "underline",
-            color: "black",
+            color: "var(--black)",
             overflow: "hidden",
           }}
         >
