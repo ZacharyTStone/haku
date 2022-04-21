@@ -12,7 +12,6 @@ const JobInfo = ({ icon, text, type }) => {
           style={{
             textDecoration: "underline",
             color: "var(--black)",
-            overflow: "hidden",
           }}
         >
           {text}

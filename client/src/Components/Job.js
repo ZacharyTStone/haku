@@ -49,13 +49,28 @@ const Job = ({
             <JobInfo icon={<FaLocationArrow />} text={jobLocation} />
             <JobInfo icon={<FaCalendarAlt />} text={date} />
             <JobInfo icon={<FaBriefcase />} text={jobType} />
-            <JobInfo icon={<FaLink />} text={URL} type={"url"} />
             <div
               style={{
                 marginTop: "10px",
               }}
             >
               Job Status : <span className={`status ${status}`}>{status}</span>
+            </div>
+            <div
+              style={{
+                marginTop: "10px",
+                height: "fit-content",
+                maxWidth: "100%",
+                // wrap text
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+              }}
+            >
+              URL:
+              <a href={URL} target="_blank" rel="noopener noreferrer">
+                {URL}
+              </a>
             </div>
           </div>
           <div className="notes">
