@@ -4,7 +4,7 @@ import styled from "styled-components";
 import { FormRow } from "../../Components";
 import React, { useState, useEffect } from "react";
 import { FormRowSelect } from "../../Components";
-import Calculator from "../../Components/Calculator";
+// import Calculator from "../../Components/Calculator";
 
 const Tools = () => {
   const { isLoading, jobs, getJobs, user } = useAppContext();
@@ -150,9 +150,9 @@ const Tools = () => {
             })}
           </ol>
         </div>
-        <div className="form calculator">
+        {/* <div className="form calculator">
           <Calculator />
-        </div>
+        </div> */}
       </div>
     </Wrapper>
   );

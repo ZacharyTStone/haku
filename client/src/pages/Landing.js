@@ -8,8 +8,7 @@ import thumb4 from "../assets/images/thumb4.png";
 import { Logo } from "../Components";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Slide from "react-reveal/Slide";
-import Fade from "react-reveal/Fade";
+
 import { FaBuromobelexperte } from "react-icons/fa";
 import { FaEdit } from "react-icons/fa";
 import { FaSortAmountDown } from "react-icons/fa";
@@ -74,106 +73,94 @@ const Landing = () => {
         </nav>
         <div className="container page">
           <div>
-            <Slide left>
-              <h1>
-                Haku <span> job tracker</span>
-              </h1>
-              <p>
-                Haku pronounced "hah-koo" is an application that helps you
-                track, and compare jobs during the the interview process.
-              </p>
-              <div className="login-div">
-                <Link to="/register" className="btn btn-hero">
-                  Login/Register
-                </Link>
-                <Link to="/register-demo" className="btn btn-hipster">
-                  Demo
-                </Link>
-              </div>
-            </Slide>
+            <h1>
+              Haku <span> job tracker</span>
+            </h1>
+            <p>
+              Haku pronounced "hah-koo" is an application that helps you track,
+              and compare jobs during the the interview process.
+            </p>
+            <div className="login-div">
+              <Link to="/register" className="btn btn-hero">
+                Login/Register
+              </Link>
+              <Link to="/register-demo" className="btn btn-hipster">
+                Demo
+              </Link>
+            </div>
           </div>
-          <Fade>
-            <img src={main} alt="job hunt" className="img main-img" />
-          </Fade>
+
+          <img src={main} alt="job hunt" className="img main-img" />
         </div>
         <div className="container">
-          <Fade>
-            <div className="features" id="icon-row">
-              <h3>
-                {" "}
-                <span>How do I use Haku?</span>
-              </h3>
-              <Slide left>
-                <div className="icon-row">
-                  <div className="icon">
-                    <div className="icon-img">
-                      <FaBuromobelexperte
-                        size={"50px"}
-                        color="var(--primary-500)"
-                      />
-                    </div>
-                    <p>
-                      <span>1.</span> Log the jobs you apply for.
-                    </p>
-                  </div>
-                  <div className="icon">
-                    <FaEdit size={"50px"} color="var(--primary-500)" />
-                    <p>
-                      <span>2.</span> Hear back from the company? Update that
-                      job to reflect your interview status
-                    </p>
-                  </div>
-                  <div className="icon">
-                    <FaSortAmountDown
-                      size={"50px"}
-                      color="var(--primary-500)"
-                    />
-                    <p>
-                      <span>3.</span> Use Haku's built in tools to compare and
-                      contrast job offers.
-                    </p>
-                  </div>
+          <div className="features" id="icon-row">
+            <h3>
+              {" "}
+              <span>How do I use Haku?</span>
+            </h3>
+
+            <div className="icon-row">
+              <div className="icon">
+                <div className="icon-img">
+                  <FaBuromobelexperte
+                    size={"50px"}
+                    color="var(--primary-500)"
+                  />
                 </div>
-              </Slide>
+                <p>
+                  <span>1.</span> Log the jobs you apply for.
+                </p>
+              </div>
+              <div className="icon">
+                <FaEdit size={"50px"} color="var(--primary-500)" />
+                <p>
+                  <span>2.</span> Hear back from the company? Update that job to
+                  reflect your interview status
+                </p>
+              </div>
+              <div className="icon">
+                <FaSortAmountDown size={"50px"} color="var(--primary-500)" />
+                <p>
+                  <span>3.</span> Use Haku's built in tools to compare and
+                  contrast job offers.
+                </p>
+              </div>
             </div>
-          </Fade>
+          </div>
         </div>
         <div className="container page">
-          <Fade>
-            <img src={computer} alt="job hunt" className="img main-img" />
-          </Fade>
+          <img src={computer} alt="job hunt" className="img main-img" />
+
           <div>
-            <Slide right>
-              <h3>
-                <span> Why use Haku?</span>
-              </h3>
-              <ul>
-                <li>
-                  <FaCheck /> It's 100% free and contains no ads.
-                </li>
-                <li>
-                  <FaCheck /> It's easy to use and intuitive.
-                </li>
-                <li>
-                  {" "}
-                  <FaCheck />
-                  We take security very seriously and use advanced encyrption to
-                  protect your information from breaches, and hacking attempts.
-                </li>
-                <li>
-                  {" "}
-                  <FaCheck />
-                  Unlike other job trackers, Haku does not use cookies to track
-                  you for advertising purposes and does not request personal
-                  data from any third parties.
-                </li>
-                <li>
-                  {" "}
-                  <FaCheck />
-                  We're always working on adding new features and improvements.
-                </li>
-              </ul>
-            </Slide>
+            <h3>
+              <span> Why use Haku?</span>
+            </h3>
+            <ul>
+              <li>
+                <FaCheck /> It's 100% free and contains no ads.
+              </li>
+              <li>
+                <FaCheck /> It's easy to use and intuitive.
+              </li>
+              <li>
+                {" "}
+                <FaCheck />
+                We take security very seriously and use advanced encyrption to
+                protect your information from breaches, and hacking attempts.
+              </li>
+              <li>
+                {" "}
+                <FaCheck />
+                Unlike other job trackers, Haku does not use cookies to track
+                you for advertising purposes and does not request personal data
+                from any third parties.
+              </li>
+              <li>
+                {" "}
+                <FaCheck />
+                We're always working on adding new features and improvements.
+              </li>
+            </ul>
           </div>
         </div>
         <div className="container page gallery">
@@ -190,46 +177,40 @@ const Landing = () => {
         </div>
         <div className="container page">
           <div>
-            <Slide right>
-              <div>
-                <h3>Time to land that dream job!</h3>
-                <div className="login-div">
-                  <Link to="/register" className="btn btn-hero">
-                    Login/Register
-                  </Link>
-                  <Link
-                    to="/register-demo"
-                    className="btn btn-hero btn-hipster"
-                  >
-                    Demo
-                  </Link>
-                </div>
-                <h5
-                  style={{
-                    marginTop: "2rem",
-                  }}
-                >
-                  For all inquieres please contact Zach Stone at{" "}
-                  <span>
-                    <a
-                      href="https://zstone.dev"
-                      target={"_blank"}
-                      rel="noreferrer"
-                      style={{
-                        textDecoration: "underline",
-                        color: "black",
-                      }}
-                    >
-                      ZStone.dev
-                    </a>
-                  </span>
-                </h5>
+            <div>
+              <h3>Time to land that dream job!</h3>
+              <div className="login-div">
+                <Link to="/register" className="btn btn-hero">
+                  Login/Register
+                </Link>
+                <Link to="/register-demo" className="btn btn-hero btn-hipster">
+                  Demo
+                </Link>
               </div>
-            </Slide>
+              <h5
+                style={{
+                  marginTop: "2rem",
+                }}
+              >
+                For all inquieres please contact Zach Stone at{" "}
+                <span>
+                  <a
+                    href="https://zstone.dev"
+                    target={"_blank"}
+                    rel="noreferrer"
+                    style={{
+                      textDecoration: "underline",
+                      color: "black",
+                    }}
+                  >
+                    ZStone.dev
+                  </a>
+                </span>
+              </h5>
+            </div>
           </div>
-          <Fade>
-            <img src={hello} alt="job hunt" className="img main-img" />
-          </Fade>
+
+          <img src={hello} alt="job hunt" className="img main-img" />
         </div>
       </Wrapper>
     </>
