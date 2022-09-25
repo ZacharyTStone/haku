@@ -27,6 +27,7 @@ const AddJob = () => {
     notes,
     stared,
     URL,
+    user
   } = useAppContext();
 
   const handleSubmit = (e) => {

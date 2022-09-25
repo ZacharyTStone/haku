@@ -32,6 +32,10 @@ const JobSchema = new mongoose.Schema(
       ref: "User",
       required: [true, "Please provide user"],
     },
+    isDemoJob : {
+      type: Boolean,
+      default: false,
+    },
     notes: {
       type: String,
       maxlength: 300,

@@ -23,6 +23,10 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: [false],
   },
+  isDemoUser: {
+    type: Boolean,
+    default: false,
+  },
   password: {
     type: String,
     required: [true, "Please provide password"],
