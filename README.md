@@ -100,7 +100,6 @@ I implemented a ttl index on the db and used new mongo fields to determine if th
 
 They expire right after the JWT expires
 
-```
 
 ## Dark Theme
 
