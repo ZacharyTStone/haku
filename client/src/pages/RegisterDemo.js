@@ -8,6 +8,7 @@ const initialState = {
   email: "",
   password: "",
   isMember: true,
+  isDemoUser: true,
 };
 
 const Register = () => {
@@ -24,7 +25,7 @@ const Register = () => {
     setValues({ ...values, [e.target.name]: e.target.value });
   };
   const onSubmit = () => {
-    const { name, email, password, isMember } = {
+    const { name, email, password, isMember, isDemoUser } = {
       name: "DEMO",
       email:
         "DEMO" +
@@ -34,12 +35,14 @@ const Register = () => {
         "@demo.com",
       password: "DEMO" + Math.floor(Math.random() * 100) + "DEMO",
       isMember: true,
+      isDemoUser: true,
     };
 
     const currentUser = {
       name,
       email,
       password,
+      isDemoUser,
     };
 
     setupUser({

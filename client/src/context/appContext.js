@@ -239,7 +239,10 @@ const AppProvider = ({ children }) => {
         notes,
         stared,
         URL,
+        user
       } = state;
+
+      console.log(user)
 
       await authFetch.post("/jobs", {
         position,
@@ -250,6 +253,7 @@ const AppProvider = ({ children }) => {
         notes,
         stared,
         URL,
+        user,
       });
       dispatch({ type: CREATE_JOB_SUCCESS });
       dispatch({ type: CLEAR_VALUES });

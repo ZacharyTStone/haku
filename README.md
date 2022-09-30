@@ -96,89 +96,10 @@ This is important because when the demo user logs out the emailProvider is acces
 
 The tutorial app could not delete a user and their jobs.
 
-I created a delete user button and added delete user functionality to the app.
+I implemented a ttl index on the db and used new mongo fields to determine if the user and jobs are made from a demo user
 
-in auth controller
+They expire right after the JWT expires
 
-```
-const deleteUser = async (req, res) => {
- const user = await User.findOne({ _id: req.user.userId });
- await user.remove();
- res.status(StatusCodes.OK).json({ message: "User deleted" });
-
- const jobs = await Job.find({ createdBy: req.user.userId });
- await jobs.forEach((job) => {
- job.remove();
- });
-};
-
-```
-
-react context actions
-
-```
-
- DELETE_USER_BEGIN,
- DELETE_USER_SUCCESS,
- DELETE_USER_ERROR,
-
-```
-
-app context
-
-```
- const deleteUser = async (currentUser) => {
- dispatch({ type: DELETE_USER_BEGIN });
- try {
- const { data } = await authFetch.delete("/auth/deleteUser", currentUser);
-
- const { user, location, token } = data;
-
- dispatch({
- type: DELETE_USER_SUCCESS,
- payload: { user, location, token },
- });
- } catch (error) {
- if (error.response.status !== 401) {
- dispatch({
- type: DELETE_USER_ERROR,
- payload: { msg: error.response.data.msg },
- });
- }
- }
- clearAlert();
- removeUserFromLocalStorage();
- };
-
-```
-
-reducers
-
-```
-
-if (action.type === DELETE_USER_BEGIN) {
- return { ...state, isLoading: true };
- }
- if (action.type === DELETE_USER_SUCCESS) {
- return {
- ...state,
- isLoading: false,
- showAlert: true,
- alertType: "success",
- alertText: "User Profile Deleted! Redirecting to Login Page...",
- };
- }
- if (action.type === DELETE_USER_ERROR) {
- return {
- ...state,
- isLoading: false,
- showAlert: true,
- alertType: "danger",
- alertText: action.payload.msg,
- };
- }
-
-```
 
 ## Dark Theme
 
