@@ -50,7 +50,7 @@ const UserSchema = new mongoose.Schema({
     enum: ["light", "dark"],
     default: "light",
   },
-});
+}, { timestamps: true });
 
 UserSchema.pre("save", async function () {
   // hash the password
