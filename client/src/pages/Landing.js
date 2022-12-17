@@ -142,7 +142,7 @@ const Landing = () => {
             </h3>
             <ul>
               <li>
-                <FaCheck /> It's 100% free and contains no ads.
+                <FaCheck /> It's 100% free.
               </li>
               <li>
                 <FaCheck /> It's easy to use and intuitive.
