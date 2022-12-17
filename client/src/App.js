@@ -7,9 +7,12 @@ import Profile from "./pages/Dashboard/Profile";
 import Tools from "./pages/Dashboard/Tools";
 import SharedLayout from "./pages/Dashboard/SharedLayout";
 import RegisterDemo from "./pages/RegisterDemo";
+import { Helmet, HelmetProvider } from 'react-helmet-async';
+
 
 function App() {
   return (
+    <HelmetProvider>
     <BrowserRouter>
       <Routes>
         <Route
@@ -32,6 +35,7 @@ function App() {
         <Route path="*" element={<Error />} />
       </Routes>
     </BrowserRouter>
+    </HelmetProvider>
   );
 }
 

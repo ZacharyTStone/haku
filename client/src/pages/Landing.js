@@ -18,6 +18,7 @@ import ImageGallery from "react-image-gallery";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { useEffect } from "react";
+import { Helmet} from 'react-helmet-async'; 
 
 const images = [
   {
@@ -56,6 +57,10 @@ const Landing = () => {
 
   return (
     <>
+     <Helmet>
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2495439414515461"
+     crossorigin="anonymous"></script>
+      </Helmet>
       {/* <ToastContainer
         position="top-right"
         autoClose={5000}
