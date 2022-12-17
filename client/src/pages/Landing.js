@@ -59,7 +59,11 @@ const Landing = () => {
     <>
      <Helmet>
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2495439414515461"
-     crossorigin="anonymous"></script>
+     crossorigin="anonymous" 
+   
+     ></script>
+       // cors policy
+     <meta http-equiv="Content-Security-Policy"  content="default-src 'self'; img-src https://*; child-src 'none'; https://pagead2.googlesyndication.com;" />
       </Helmet>
       {/* <ToastContainer
         position="top-right"
