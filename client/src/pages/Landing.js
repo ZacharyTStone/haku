@@ -58,8 +58,12 @@ const Landing = () => {
   return (
     <>
      <Helmet>
-     <meta http-equiv="Content-Security-Policy"  content="script-src-elem *" />
-     <meta http-equiv="Content-Security-Policy"  content="script-src *" />
+     <script src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2495439414515461"
+     crossorigin="anonymous" 
+   
+     ></script>
+     <meta http-equiv="Content-Security-Policy"  content="script-src-elem https://pagead2.googlesyndication.com" />
+     <meta http-equiv="Content-Security-Policy"  content="script-src https://pagead2.googlesyndication.com" />
      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2495439414515461"
      crossorigin="anonymous"></script>
 
