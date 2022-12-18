@@ -58,7 +58,7 @@ const Landing = () => {
   return (
     <>
      <Helmet>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2495439414515461"
+     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
      crossorigin="anonymous" 
    
      ></script>
