@@ -63,7 +63,7 @@ const Landing = () => {
    
      ></script>
        // cors policy
-     <meta http-equiv="Content-Security-Policy"  content="script-src https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+     <meta http-equiv="Content-Security-Policy"  content="script-src-elem https://pagead2.googlesyndication.com" />
       </Helmet>
       {/* <ToastContainer
         position="top-right"
