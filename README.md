@@ -182,12 +182,13 @@ max: 50,
 
 ## ENV
 
+```
 INLINE_RUNTIME_CHUCK=false
 JWT_LIFETIME=1d
 JWT_SECRET=<random string>
 MONGO_URL=<Mongo URI>
 REACT_APP_RATE_API=<https://openexchangerates.org api>
-
+```
 
 
 
