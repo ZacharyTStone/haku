@@ -43,6 +43,7 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 - [Stats](#stats)
 - [Donations](#donations)
 - [Other](#other)
+- [ENV] )(#env)
 
 ## Links
 
@@ -177,6 +178,16 @@ windowMs: 1 _ 60 _ 1000, // 1 minute
 max: 50,
 });
 
+```
+
+## ENV
+
+```
+INLINE_RUNTIME_CHUCK=false
+JWT_LIFETIME=1d
+JWT_SECRET=<random string>
+MONGO_URL=<Mongo URI>
+REACT_APP_RATE_API=<https://openexchangerates.org api>
 ```
 
 
