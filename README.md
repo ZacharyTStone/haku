@@ -180,13 +180,20 @@ max: 50,
 
 ```
 
-## ENV
+## ENV 
+
+###. placed on the server level
 
 ```
 INLINE_RUNTIME_CHUCK=false
 JWT_LIFETIME=1d
 JWT_SECRET=<random string>
 MONGO_URL=<Mongo URI>
+```
+
+### Env place in client
+
+```
 REACT_APP_RATE_API=<https://openexchangerates.org api>
 ```
 
