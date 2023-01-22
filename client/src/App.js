@@ -8,7 +8,7 @@ import Tools from "./pages/Dashboard/Tools";
 import SharedLayout from "./pages/Dashboard/SharedLayout";
 import RegisterDemo from "./pages/RegisterDemo";
 import { Helmet, HelmetProvider } from 'react-helmet-async';
-import AdSense from 'react-adsense';
+// import AdSense from 'react-adsense';
 
 
  
@@ -18,10 +18,10 @@ import AdSense from 'react-adsense';
 function App() {
   return (
     <HelmetProvider>
-      <AdSense.Google
+      {/* <AdSense.Google
   client='ca-pub-2495439414515461'
   slot={process.env.REACT_APP_ADSENSE_SLOT}
-/>
+/> */}
  
     <BrowserRouter>
       <Routes>
