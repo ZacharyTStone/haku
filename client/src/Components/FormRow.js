@@ -1,8 +1,25 @@
-const FormRow = ({ type, name, value, handleChange, labelText, height }) => {
+const FormRow = ({
+  type,
+  name,
+  value,
+  handleChange,
+  labelText,
+  height,
+  required,
+}) => {
   return (
     <div className="form-row">
       <label htmlFor={name} className="form-label">
-        {labelText || name}
+        {labelText || name}{" "}
+        {required && (
+          <span
+            style={{
+              color: "red",
+            }}
+          >
+            *
+          </span>
+        )}
       </label>
       <input
         type={type}

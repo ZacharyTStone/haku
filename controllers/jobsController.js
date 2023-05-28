@@ -12,9 +12,8 @@ const createJob = async (req, res) => {
   const { position, company } = req.body;
 
   if (!position || !company) {
-    throw new BadRequestError("Please provide all values");
+    throw new BadRequestError("Please provide all required values");
   }
-
 
   req.body.createdBy = req.user.userId;
   req.body.isDemoJob = req.body.user.isDemoUser;
@@ -94,7 +93,7 @@ const updateJob = async (req, res) => {
   const { company, position } = req.body;
 
   if (!position || !company) {
-    throw new BadRequestError("Please provide all values");
+    throw new BadRequestError("Please provide all required values");
   }
   const job = await Job.findOne({ _id: jobId });
 

@@ -8,7 +8,7 @@ const register = async (req, res) => {
   // const emailProvider = email.split("@")[1];
 
   if (!name || !email || !password) {
-    throw new BadRequestError("please provide all values");
+    throw new BadRequestError("please provide all required values");
   }
   const userAlreadyExists = await User.findOne({ email });
   if (userAlreadyExists) {
@@ -33,7 +33,7 @@ const register = async (req, res) => {
 const login = async (req, res) => {
   const { email, password } = req.body;
   if (!email || !password) {
-    throw new BadRequestError("Please provide all values");
+    throw new BadRequestError("Please provide all required values");
   }
   const user = await User.findOne({ email }).select("+password");
   if (!user) {
@@ -51,7 +51,7 @@ const login = async (req, res) => {
 const updateUser = async (req, res) => {
   const { email, name, lastName, location, theme } = req.body;
   if (!email || !name || !lastName || !location) {
-    throw new BadRequestError("Please provide all values");
+    throw new BadRequestError("Please provide all required values");
   }
   const user = await User.findOne({ _id: req.user.userId });
 

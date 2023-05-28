@@ -27,13 +27,13 @@ const AddJob = () => {
     notes,
     stared,
     URL,
-    user
+    user,
   } = useAppContext();
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!position || !company || !jobLocation) {
+    if (!position || !company) {
       displayAlert();
       return;
     }
@@ -76,6 +76,7 @@ const AddJob = () => {
         <div className="form-center">
           {/* position */}
           <FormRow
+            required
             type="text"
             name="position"
             value={position}
@@ -83,6 +84,7 @@ const AddJob = () => {
           />
           {/* company */}
           <FormRow
+            required
             type="text"
             name="company"
             value={company}

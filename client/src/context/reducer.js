@@ -38,7 +38,7 @@ const reducer = (state, action) => {
       ...state,
       showAlert: true,
       alertType: "danger",
-      alertText: "Please provide all values!",
+      alertText: "Please provide all required values!",
     };
   }
   if (action.type === CLEAR_ALERT) {
@@ -157,6 +157,7 @@ const reducer = (state, action) => {
       status: "pending",
       notes: "",
       stared: "false",
+      URL: "",
     };
 
     return {
