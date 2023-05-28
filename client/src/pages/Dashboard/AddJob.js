@@ -1,4 +1,4 @@
-import { FormRow, FormRowSelect, Alert } from "../../Components";
+import { FormRow, FormRowSelect, Alert, FormRowList } from "../../Components";
 import FormRowArea from "../../Components/FormRowArea";
 import { useAppContext } from "../../context/appContext";
 import styled from "styled-components";
@@ -28,6 +28,8 @@ const AddJob = () => {
     stared,
     URL,
     user,
+    pros,
+    cons,
   } = useAppContext();
 
   const handleSubmit = (e) => {
@@ -124,6 +126,18 @@ const AddJob = () => {
             name="notes"
             labelText="notes"
             value={notes}
+            handleChange={handleJobInput}
+          />
+          <FormRowList
+            name="pros"
+            labelText="pros"
+            value={pros}
+            handleChange={handleJobInput}
+          />
+          <FormRowList
+            name="cons"
+            labelText="cons"
+            value={cons}
             handleChange={handleJobInput}
           />
           {/* btn container */}

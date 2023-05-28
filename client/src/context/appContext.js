@@ -83,6 +83,8 @@ const initialState = {
   stared: "false",
   staredOptions: ["true", "false"],
   URL: "",
+  pros: [],
+  cons: [],
 };
 
 const AppContext = React.createContext();
@@ -239,10 +241,12 @@ const AppProvider = ({ children }) => {
         notes,
         stared,
         URL,
-        user
+        user,
+        pros,
+        cons,
       } = state;
 
-      console.log(user)
+      console.log(user);
 
       await authFetch.post("/jobs", {
         position,
@@ -253,6 +257,8 @@ const AppProvider = ({ children }) => {
         notes,
         stared,
         URL,
+        pros,
+        cons,
         user,
       });
       dispatch({ type: CREATE_JOB_SUCCESS });

@@ -158,6 +158,8 @@ const reducer = (state, action) => {
       notes: "",
       stared: "false",
       URL: "",
+      pros: [],
+      cons: [],
     };
 
     return {

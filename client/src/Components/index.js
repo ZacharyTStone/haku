@@ -10,6 +10,7 @@ import Navbar from "./Navbar";
 import SearchContainer from "./SearchContainer";
 import SmallSidebar from "./SmallSidebar";
 import StatsContainer from "./StatsContainer";
+import FormRowList from "./FormRowList";
 export {
   Logo,
   FormRow,
@@ -23,4 +24,5 @@ export {
   StatsContainer,
   ChartsContainer,
   Loading,
+  FormRowList,
 };
