@@ -47,7 +47,7 @@ I hope you enjoy this project and if you have any questions or comments feel fre
 
 ## Links
 
-- Live Site: (https://hataraku.herokuapp.com)
+- Live Site: (https://www.hakujobs.com)
 - Github Repository URL: (https://github.com/zachinjapan/haku)
 
 ## License
