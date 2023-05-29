@@ -129,14 +129,20 @@ const AddJob = () => {
             handleChange={handleJobInput}
           />
           <FormRowList
+            height={300}
+            centerText
+            boldTitle
             name="pros"
-            labelText="pros"
+            labelText="pros (up to 5)"
             value={pros}
             handleChange={handleJobInput}
           />
           <FormRowList
+            height={300}
+            centerText
+            boldTitle
             name="cons"
-            labelText="cons"
+            labelText="cons (up to 5) "
             value={cons}
             handleChange={handleJobInput}
           />

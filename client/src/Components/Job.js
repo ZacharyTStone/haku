@@ -10,6 +10,7 @@ import { useAppContext } from "../context/appContext";
 import JobInfo from "./JobInfo";
 import styled from "styled-components";
 import { FaStar } from "react-icons/fa";
+import { useState } from "react";
 
 const Job = ({
   _id,
@@ -22,10 +23,13 @@ const Job = ({
   notes,
   stared,
   URL,
+  pros,
+  cons,
 }) => {
   const { setEditJob, deleteJob } = useAppContext();
   console.log(status);
 
+  const [showNotes, setShowNotes] = useState(false);
   let date = moment(createdAt);
   date = date.format("MMM Do, YYYY");
   return (
@@ -67,15 +71,62 @@ const Job = ({
                 textOverflow: "ellipsis",
               }}
             >
-              URL:
+              <FaLink />{" "}
               <a href={URL} target="_blank" rel="noopener noreferrer">
                 {URL}
               </a>
             </div>
+            <button
+              className="btn btn-hipster"
+              onClick={() => setShowNotes(!showNotes)}
+            >
+              {showNotes ? "Hide Job Notes" : "Show Job Notes"}
+            </button>
           </div>
-          <div className="notes">
-            <p>{notes}</p>
-          </div>
+          {showNotes && (
+            <>
+              <div className="notes">
+                <h5>Notes</h5>
+                <p>{notes}</p>
+              </div>
+
+              <div className="pros notes">
+                <h5>Pros</h5>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    marginTop: "10px",
+                  }}
+                >
+                  {pros.map((pro, index) => {
+                    return (
+                      <p key={index}>
+                        {index + 1} - {pro}
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
+              <div className="cons notes">
+                <h5>Cons</h5>
+                <div
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  {cons.map((con, index) => {
+                    return (
+                      <p key={index}>
+                        {index + 1} - {con}
+                      </p>
+                    );
+                  })}
+                </div>
+              </div>
+            </>
+          )}
           <footer>
             <div className="actions">
               <Link
@@ -109,15 +160,20 @@ const Wrapper = styled.article`
   .job {
     padding: 2rem;
     display: flex;
+
     flex-direction: column;
     justify-content: space-between;
   }
   .notes {
+    // make it look like a yellow sticky note
+    background: #fff3c7;
+    border-radius: 0px;
+
     padding: 1rem;
     border-top: 1px solid var(--light-gray);
     width: 100%;
     display: flex;
-    height: 150px;
+    min-height: 150px;
     flex-wrap: wrap;
     overflow: auto;
   }
@@ -185,6 +241,9 @@ const Wrapper = styled.article`
   }
   .content {
     padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
   .content-center {
     display: grid;

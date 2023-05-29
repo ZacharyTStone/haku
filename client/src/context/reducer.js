@@ -212,6 +212,9 @@ const reducer = (state, action) => {
       status,
       notes,
       stared,
+      URL,
+      pros,
+      cons,
     } = job;
     return {
       ...state,
@@ -224,6 +227,9 @@ const reducer = (state, action) => {
       status,
       notes,
       stared,
+      URL,
+      pros,
+      cons,
     };
   }
   if (action.type === DELETE_JOB_BEGIN) {

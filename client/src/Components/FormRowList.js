@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import React, { useState } from "react";
 
 const FormRowList = ({
   labelText,
@@ -6,10 +7,16 @@ const FormRowList = ({
   value,
   handleChange,
   type,
-  height,
+  inputHeight,
+
+  // overrides
+  mainHeight,
+  boldTitle,
+  centerText,
 }) => {
+  const [currentInput, setCurrentInput] = useState("");
   return (
-    <Wrapper>
+    <Wrapper height={mainHeight}>
       {" "}
       <div className="form-row">
         <label
@@ -18,35 +25,69 @@ const FormRowList = ({
           style={{
             marginTop: "10px",
             marginBottom: "6px",
+            textAlign: centerText ? "center" : "left",
+            fontWeight: boldTitle ? "bold" : "normal",
           }}
         >
           {labelText || name}{" "}
         </label>
-        {/* <textarea
-          wrap="hard"
-          resize="both"
-          type={type}
-          value={value}
-          name={name}
-          onChange={handleChange}
-          className="form-input"
-          style={{
-            height: height || "100px",
-            width: "100%",
-          }}
-        /> */}
 
         <div className="list-container">
           <ul className="list">
             {value.map((item, index) => {
               return (
-                <li key={index} className="list-item">
-                  {item}
+                // return a div with the item and a button to remove the item at the end of the div as an x
+                <li
+                  key={index}
+                  className="list-item"
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                  }}
+                >
+                  <span
+                    className="list-item-text"
+                    style={{
+                      marginTop: "20px",
+                    }}
+                  >
+                    {index + 1} - {item}
+                  </span>
+                  <button
+                    className="btn btn-hipster"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // remove the item from the list array
+                      handleChange({
+                        target: {
+                          name: name,
+                          value: value.filter((item, i) => i !== index && item),
+                        },
+                      });
+                    }}
+                  >
+                    x
+                  </button>
                 </li>
               );
             })}
           </ul>
-          (/* button to add item to list */ )
+          <input
+            type={type}
+            value={currentInput}
+            name={name}
+            onChange={(e) => {
+              e.preventDefault();
+              setCurrentInput(e.target.value);
+            }}
+            className="form-input"
+            style={{
+              inputHeight: inputHeight || "40px",
+            }}
+            disabled={value.length >= 5}
+          />
+
           <button
             className="btn btn-block btn-hipster"
             onClick={(e) => {
@@ -55,34 +96,28 @@ const FormRowList = ({
               handleChange({
                 target: {
                   name: name,
-                  value: [...value, "dsfs"],
+                  value: [...value, currentInput],
                 },
               });
+              setCurrentInput("");
             }}
+            disabled={!currentInput || value.length >= 5}
+            z
           >
             add item
           </button>
-          {/* <button
-            className="btn btn-block btn-hipster"
-            onClick={(e) => {
-              e.preventDefault();
-              handleChange({
-                target: {
-                  name: name,
-                  value: "",
-                },
-              });
-            }}
-          >
-            clear
-          </button> */}
         </div>
       </div>
     </Wrapper>
   );
 };
 
-const Wrapper = styled.section`
+const Wrapper = styled.section.attrs((props) => ({
+  height: props.height || "400px",
+}))`
+  height: ${(props) => props.height};
+  /* overflow: auto; */
+
   .normal {
     color: var(--textColor);
   }

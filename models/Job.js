@@ -32,7 +32,7 @@ const JobSchema = new mongoose.Schema(
       ref: "User",
       required: [true, "Please provide user"],
     },
-    isDemoJob : {
+    isDemoJob: {
       type: Boolean,
       default: false,
     },
@@ -51,6 +51,16 @@ const JobSchema = new mongoose.Schema(
       type: String,
       maxlength: 300,
       required: false,
+    },
+    pros: {
+      type: Array,
+      required: false,
+      maxlength: 10,
+    },
+    cons: {
+      type: Array,
+      required: false,
+      maxlength: 10,
     },
   },
   { timestamps: true }

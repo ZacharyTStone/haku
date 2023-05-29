@@ -285,6 +285,8 @@ const AppProvider = ({ children }) => {
     try {
       const { data } = await authFetch(url);
       const { jobs, totalJobs, numOfPages } = data;
+
+      console.log(jobs);
       dispatch({
         type: GET_JOBS_SUCCESS,
         payload: {
@@ -306,8 +308,18 @@ const AppProvider = ({ children }) => {
     dispatch({ type: EDIT_JOB_BEGIN });
 
     try {
-      const { position, company, jobLocation, jobType, status, notes, stared } =
-        state;
+      const {
+        position,
+        company,
+        jobLocation,
+        jobType,
+        status,
+        notes,
+        stared,
+        URL,
+        pros,
+        cons,
+      } = state;
       await authFetch.patch(`/jobs/${state.editJobId}`, {
         company,
         position,
@@ -316,6 +328,9 @@ const AppProvider = ({ children }) => {
         status,
         notes,
         stared,
+        URL,
+        pros,
+        cons,
       });
       dispatch({ type: EDIT_JOB_SUCCESS });
       dispatch({ type: CLEAR_VALUES });
