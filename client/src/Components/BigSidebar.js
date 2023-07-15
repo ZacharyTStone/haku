@@ -73,7 +73,7 @@ const Wrapper = styled.aside`
   }
   display: none;
   .bottom-half {
-    padding: 20px;
+    padding: 5px;
     button {
       margin-top: 5px;
     }
