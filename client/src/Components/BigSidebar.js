@@ -24,7 +24,11 @@ const BigSidebar = (props) => {
           <div className="bottom-half ">
             <div>
               <span>Enjoy the app?</span>
-              <button className="btn btn-block btn-hipster">
+              <button className="btn btn-block btn-hipster" 
+              
+              style={{
+                width: 'max-content',
+              }}>
                 <a
                   href="https://www.buymeacoffee.com/zachinjapan"
                   target={"_blank"}
@@ -35,7 +39,11 @@ const BigSidebar = (props) => {
                   </div>
                 </a>
               </button>
-              <button className="btn btn-block btn-hipster">
+              <button className="btn btn-block btn-hipster" 
+                style={{
+                  width: 'max-content',
+                }}>
+              
                 <a
                   href="https://commerce.coinbase.com/checkout/afcceb62-6c0f-4b12-89bc-4a085d328df5"
                   target={"_blank"}
