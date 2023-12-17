@@ -1,3 +1,4 @@
+import React from "react";
 import {
   BarChart,
   Bar,
@@ -8,7 +9,14 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-const BarChartComponent = ({ data }) => {
+interface BarChartProps {
+  data: {
+    date: string;
+    count: number;
+  }[];
+}
+
+const BarChartComponent: React.FC<BarChartProps> = ({ data }) => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <BarChart data={data} margin={{ top: 50 }}>
