@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.24.0",
+    "axios": "^1.6.0",
     "history": "^5.1.0",
     "moment": "^2.29.4",
     "normalize.css": "^8.0.1",
