@@ -1,4 +1,3 @@
-import React from "react";
 import {
   ResponsiveContainer,
   AreaChart,
@@ -9,14 +8,7 @@ import {
   Tooltip,
 } from "recharts";
 
-interface AreaChartProps {
-  data: {
-    date: string;
-    count: number;
-  }[];
-}
-
-const AreaChartComponent: React.FC<AreaChartProps> = ({ data }) => {
+const AreaChartComponent = ({ data }) => {
   return (
     <ResponsiveContainer width="100%" height={300}>
       <AreaChart data={data} margin={{ top: 50 }}>
