@@ -2,55 +2,58 @@ import mongoose from "mongoose";
 import validator from "validator";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
-const UserSchema = new mongoose.Schema({
-  name: {
-    type: String,
-    required: [true, "Please provide name"],
-    minlength: 3,
-    maxlength: 20,
-    trim: true,
-  },
-  email: {
-    type: String,
-    required: [true, "Please provide email"],
-    validate: {
-      validator: validator.isEmail,
-      message: "Please provide a valid email",
+const UserSchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      required: [true, "Please provide name"],
+      minlength: 3,
+      maxlength: 20,
+      trim: true,
     },
-    unique: true,
+    email: {
+      type: String,
+      required: [true, "Please provide email"],
+      validate: {
+        validator: validator.isEmail,
+        message: "Please provide a valid email",
+      },
+      unique: true,
+    },
+    emailProvider: {
+      type: String,
+      required: [false],
+    },
+    isDemoUser: {
+      type: Boolean,
+      default: false,
+    },
+    password: {
+      type: String,
+      required: [true, "Please provide password"],
+      minlength: 6,
+      select: false,
+    },
+    lastName: {
+      type: String,
+      trim: true,
+      maxlength: 20,
+      default: "lastName",
+    },
+    location: {
+      type: String,
+      trim: true,
+      maxlength: 20,
+      default: "my city",
+    },
+    theme: {
+      type: String,
+      enum: ["light", "dark"],
+      default: "light",
+    },
   },
-  emailProvider: {
-    type: String,
-    required: [false],
-  },
-  isDemoUser: {
-    type: Boolean,
-    default: false,
-  },
-  password: {
-    type: String,
-    required: [true, "Please provide password"],
-    minlength: 6,
-    select: false,
-  },
-  lastName: {
-    type: String,
-    trim: true,
-    maxlength: 20,
-    default: "lastName",
-  },
-  location: {
-    type: String,
-    trim: true,
-    maxlength: 20,
-    default: "my city",
-  },
-  theme: {
-    type: String,
-    enum: ["light", "dark"],
-    default: "light",
-  },
-}, { timestamps: true });
+  { timestamps: true }
+);
 
 UserSchema.pre("save", async function () {
   // hash the password
@@ -69,5 +72,14 @@ UserSchema.methods.comparePassword = async function (candidatePassword) {
   const isMatch = await bcrypt.compare(candidatePassword, this.password);
   return isMatch;
 };
+
+// Add TTL index for demo users (isDemoUser: true) to expire after 1 month
+UserSchema.index(
+  { createdAt: 1 },
+  {
+    expireAfterSeconds: 30 * 24 * 60 * 60, // 30 days in seconds
+    partialFilterExpression: { isDemoUser: true },
+  }
+);
 
 export default mongoose.model("User", UserSchema);
