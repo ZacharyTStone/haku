@@ -66,4 +66,12 @@ const JobSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
+JobSchema.index(
+  { createdAt: 1 },
+  {
+    expireAfterSeconds: 30 * 24 * 60 * 60, // 30 days in seconds
+    partialFilterExpression: { isDemoJob: true },
+  }
+);
+
 export default mongoose.model("Job", JobSchema);
