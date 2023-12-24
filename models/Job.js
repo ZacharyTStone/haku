@@ -62,6 +62,16 @@ const JobSchema = new mongoose.Schema(
       required: false,
       maxlength: 10,
     },
+    postInterviewFollowedUp: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    customTodo: {
+      type: String,
+      maxlength: 300,
+      required: false,
+    },
   },
   { timestamps: true }
 );
