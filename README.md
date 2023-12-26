@@ -20,8 +20,6 @@ To learn Authentication and database management, I took a project I made through
 
 For example, I added a new landing page, demo login, delete user functionality, dark theme, custom job and user fields, and a tools page.
 
-Here is the original course project that I used as a starting point. https://www.jobify.live/landing
-
 I hope you enjoy this project and if you have any questions or comments feel free to contact me.
 
 </br>
