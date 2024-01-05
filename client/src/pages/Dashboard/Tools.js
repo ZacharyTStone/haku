@@ -4,7 +4,6 @@ import styled from "styled-components";
 import { FormRow } from "../../Components";
 import React, { useState, useEffect } from "react";
 import { FormRowSelect } from "../../Components";
-// import Calculator from "../../Components/Calculator";
 
 const Tools = () => {
   const { isLoading, jobs, getJobs, user } = useAppContext();
@@ -22,14 +21,14 @@ const Tools = () => {
       "https://openexchangerates.org/api/latest.json?app_id=" +
         process.env.REACT_APP_RATE_API
     )
-      .then((response) => response.json())
-      .then((data) => {
+      ?.then((response) => response.json())
+      ?.then((data) => {
         let array = [];
         for (let key in data.rates) {
           array.push(key);
         }
         setCurrencyOptions(array);
-        setCurrData(data.rates);
+        setCurrData(data?.rates);
       })
       .catch((error) => {
         console.log(error);
@@ -136,23 +135,20 @@ const Tools = () => {
         <div className="form all-jobs">
           <h3>Recent Jobs</h3>
           <ol>
-            {jobs.map((job) => {
+            {jobs?.map((job) => {
               console.log(job);
               return (
                 <li>
                   <span>
-                    {job.position}:{job.company}
+                    {job?.position}:{job?.company}
                   </span>
-                  <span> | {job.jobLocation}</span>
-                  <span> | {job.createdAt.slice(0, 10)}</span>
+                  <span> | {job?.jobLocation}</span>
+                  <span> | {job?.createdAt?.slice(0, 10)}</span>
                 </li>
               );
             })}
           </ol>
         </div>
-        {/* <div className="form calculator">
-          <Calculator />
-        </div> */}
       </div>
     </Wrapper>
   );
