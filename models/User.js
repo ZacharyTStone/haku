@@ -51,6 +51,22 @@ const UserSchema = new mongoose.Schema(
       enum: ["light", "dark"],
       default: "light",
     },
+    requestPostInterviewFollow_up: {
+      type: Boolean,
+      default: false,
+    },
+    requestMinApplicationPerMonth: {
+      type: Boolean,
+      default: false,
+    },
+    allowCustomTodo: {
+      type: Boolean,
+      default: false,
+    },
+    minApplicationsPerMonth: {
+      type: Number,
+      default: 10,
+    },
   },
   { timestamps: true }
 );

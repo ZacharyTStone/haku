@@ -14,7 +14,7 @@ const JobSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["interview", "followed up", "declined", "pending"],
+      enum: ["pending", "interview", "followed up", "declined"],
       default: "pending",
     },
     jobType: {
@@ -55,12 +55,17 @@ const JobSchema = new mongoose.Schema(
     pros: {
       type: Array,
       required: false,
-      maxlength: 10,
+      maxlength: 5,
     },
     cons: {
       type: Array,
       required: false,
-      maxlength: 10,
+      maxlength: 5,
+    },
+    customTodo: {
+      type: String,
+      maxlength: 300,
+      required: false,
     },
   },
   { timestamps: true }
