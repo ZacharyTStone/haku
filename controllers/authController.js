@@ -5,7 +5,6 @@ import { BadRequestError, UnAuthenticatedError } from "../errors/index.js";
 
 const register = async (req, res) => {
   const { name, email, password, isDemoUser } = req.body;
-  // const emailProvider = email.split("@")[1];
 
   if (!name || !email || !password) {
     throw new BadRequestError("please provide all required values");
@@ -25,6 +24,10 @@ const register = async (req, res) => {
       location: user.location,
       name: user.name,
       theme: user.theme,
+      requestMinApplicationPerMonth: user.requestMinApplicationPerMonth,
+      requestPostInterviewFollow_up: user.requestPostInterviewFollow_up,
+      allowCustomTodo: user.allowCustomTodo,
+      minApplicationPerMonth: user.minApplicationPerMonth,
     },
     token,
     location: user.location,

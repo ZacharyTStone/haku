@@ -7,7 +7,17 @@ const Todo = (props) => {
   if (isLoading) {
     return <Loading center />;
   }
-  return <div date-theme={user.theme}></div>;
+  return (
+    <div date-theme={user.theme}>
+      {`allowCustomTodo: ${user.allowCustomTodo}`}
+
+      {`requestMinApplicationPerMonth: ${user.requestMinApplicationPerMonth}`}
+
+      {`requestPostInterviewFollow_up: ${user.requestPostInterviewFollow_up}`}
+
+      {`minApplicationPerMonth: ${user.minApplicationPerMonth}`}
+    </div>
+  );
 };
 
 export default Todo;

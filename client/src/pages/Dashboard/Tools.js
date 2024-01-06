@@ -17,6 +17,10 @@ const Tools = () => {
   useEffect(() => {
     getJobs();
     console.log(jobs);
+
+    if (!process.env.REACT_APP_RATE_API) {
+      return;
+    }
     fetch(
       "https://openexchangerates.org/api/latest.json?app_id=" +
         process.env.REACT_APP_RATE_API
@@ -56,7 +60,7 @@ const Tools = () => {
                 salary === ""
                   ? "Salary"
                   : "Base Salary : " +
-                    Number(salary).toLocaleString("en-US", {
+                    Number(salary)?.toLocaleString("en-US", {
                       style: "currency",
                       currency: "USD",
                     })
@@ -72,7 +76,7 @@ const Tools = () => {
               name="Base Currency"
               type="number"
               value={baseCurrency}
-              handleChange={(e) => setBaseCurrency(e.target.value)}
+              handleChange={(e) => setBaseCurrency(e?.target?.value)}
               list={currencyOptions}
               disabled={true}
             />
@@ -80,7 +84,7 @@ const Tools = () => {
               name="Target Currency"
               value={targetCurrency}
               handleChange={(e) => {
-                setTargetCurrency(e.target.value);
+                setTargetCurrency(e?.target?.value);
               }}
               list={currencyOptions}
               disabled={error}
