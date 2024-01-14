@@ -38,7 +38,7 @@ const JobSchema = new mongoose.Schema(
     },
     notes: {
       type: String,
-      maxlength: 300,
+      maxlength: 600,
       required: false,
     },
     stared: {
@@ -49,7 +49,7 @@ const JobSchema = new mongoose.Schema(
     },
     URL: {
       type: String,
-      maxlength: 300,
+      maxlength: 600,
       required: false,
     },
     pros: {
@@ -64,7 +64,7 @@ const JobSchema = new mongoose.Schema(
     },
     customTodo: {
       type: String,
-      maxlength: 300,
+      maxlength: 600,
       required: false,
     },
   },

@@ -8,6 +8,8 @@ const FormRowArea = ({
   type,
   height,
 }) => {
+  const textAreaLimit = 600;
+
   return (
     <Wrapper>
       {" "}
@@ -21,8 +23,10 @@ const FormRowArea = ({
           }}
         >
           {labelText || name}{" "}
-          <span className={300 - value.length >= 0 ? "normal" : "red"}>
-            * {300 - value.length} characters left
+          <span
+            className={textAreaLimit - value.length >= 0 ? "normal" : "red"}
+          >
+            * {textAreaLimit - value.length} characters left
           </span>
         </label>
         <textarea
