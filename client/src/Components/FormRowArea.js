@@ -8,7 +8,7 @@ const FormRowArea = ({
   type,
   height,
 }) => {
-  const textAreaLimit = 600;
+  const textAreaLimit = 1000;
 
   return (
     <Wrapper>
