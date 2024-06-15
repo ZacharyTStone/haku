@@ -128,7 +128,7 @@ const Tools = () => {
             </li>
             <li>
               <a
-                href="https://zachinjapan.com/How%20I%20Respond%20to%20Application%20Rejections/"
+                href="https://zach-in-japan.netlify.app/How%20I%20Respond%20to%20Application%20Rejections/"
                 target="_blank"
               >
                 How I Respond to Application Rejections (My blog)
